@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Lightning Components in 10 minutes 
+title: Hello This is my first Blog post :)
 ---
 In this post, lets use the Lightning Components to build an application called ContactsFinder. The application provides quick access to your Salesforce Contacts within your org.
 The Lightning Application uses three Lightning Components: SearchBar, ContactList, and ContactDetails. These components communicate using Lightning events.
