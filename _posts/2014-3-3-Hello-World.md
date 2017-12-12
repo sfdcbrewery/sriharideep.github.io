@@ -66,7 +66,7 @@ Lets start by creating an lightning app that acts as a container to our Lightnin
 
 2. Implement the application as follows:
 
-    ```
+    ```html
     <aura:application>
 
         <link href='/resource/bootstrap' rel="stylesheet"/>
@@ -112,7 +112,7 @@ Lets start by creating the ContactList component that displays contacts in our a
 
 2. Implement the component as follows:
 
-    ```
+    ```html
     <aura:component controller="ContactController">
 
         <aura:attribute name="contacts" type="Contact[]"/>
@@ -149,7 +149,7 @@ Now lets implement the Controller by adding few lines of Javscript mentioned bel
 
 2) Implement the Controller as follows:
 
-    ```
+    ```javascript
     ({
         doInit : function(component, event) {
             var action = component.get("c.findAll");
@@ -194,7 +194,7 @@ Let's start by creating a searchKeyChange event int he Developer Console:
 1) Dev Console > File > New > Lightning Event. Specify SearchKeyChange as name and click Submit 
 2) Add the below code to your event.   
 
-```
+```html
     <aura:event type="APPLICATION">
         <aura:attribute name="searchKey" type="String"/>
     </aura:event>
@@ -208,7 +208,7 @@ Now lets create the actual ###SearchBar component
 
 2) Add the below lines of code:
 
-    ```
+    ```html
     <aura:component>
 
         <input type="text" class="form-control" onkeyup="{!c.searchKeyChange}"
@@ -224,7 +224,7 @@ Now lets create the actual ###SearchBar component
 Now lets add some js code to enable the controller for the SearchBar component.
 
 Add the below lines of the code:
-    ```
+    ```javascript
     ({
         searchKeyChange: function(component, event, helper) {
             var myEvent = $A.get("e.SearchKeyChange");
@@ -251,7 +251,7 @@ Now lets set-up the ContactList component to litsen to the event change by addin
 -> When the asynchronous call returns, you assign the list of contacts returned by findByName() to the component's contacts attribute.
 
 Before we add the search component to our app let's add the SearchKeyChange Js code to our ContactList controller
-    ```
+    ```javascript
     searchKeyChange: function(component, event) {
         var searchKey = event.getParam("searchKey");
         var action = component.get("c.findByName");
