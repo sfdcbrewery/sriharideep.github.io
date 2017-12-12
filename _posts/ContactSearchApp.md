@@ -27,6 +27,7 @@ In Salesforce, click your name in the upper right corner of the screen. In the d
 Implement the class as follows:
 
 ```java
+
 public with sharing class ContactController {
 
     @AuraEnabled
@@ -47,6 +48,7 @@ public with sharing class ContactController {
     }
 
 }
+
 ```
 ContactController is a regular controller class with methods to retrieve contacts (findAll), or to search contacts by name (findByName) or by id (findById).
 The @AuraEnabled method annotation makes a method available to Lightning applications
@@ -67,6 +69,7 @@ Lets start by creating an lightning app that acts as a container to our Lightnin
 2. Implement the application as follows:
 
     ```html
+
     <aura:application>
 
         <link href='/resource/bootstrap' rel="stylesheet"/>
@@ -88,6 +91,7 @@ Lets start by creating an lightning app that acts as a container to our Lightnin
         </div>
 
     </aura:application>
+
     ```
     -> The **link** tag references the bootstrap style sheet uploaded as a static resource in your org i.e. dist/css
     -> The application uses Bootstrap to implement a basic layout for the application
@@ -113,6 +117,7 @@ Lets start by creating the ContactList component that displays contacts in our a
 2. Implement the component as follows:
 
     ```html
+
     <aura:component controller="ContactController">
 
         <aura:attribute name="contacts" type="Contact[]"/>
@@ -130,6 +135,7 @@ Lets start by creating the ContactList component that displays contacts in our a
         </ul>
 
     </aura:component>
+
     ```
     - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) we already created.
     - The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
@@ -150,6 +156,7 @@ Now lets implement the Controller by adding few lines of Javscript mentioned bel
 2) Implement the Controller as follows:
 
     ```javascript
+    
     ({
         doInit : function(component, event) {
             var action = component.get("c.findAll");
@@ -159,6 +166,7 @@ Now lets implement the Controller by adding few lines of Javscript mentioned bel
             $A.enqueueAction(action);
         }
     })
+    
     ```
 
     - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
@@ -173,6 +181,7 @@ Now lets implement the Controller by adding few lines of Javscript mentioned bel
 Inorder to preview the component we need to add the component to our main **QuickContacts** application as shown below:
 
     ```html
+    
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -180,6 +189,7 @@ Inorder to preview the component we need to add the component to our main **Quic
             </div>
         </div>
     </div>
+    
     ```
 
 1) Click **File** > **Save** to save the file
@@ -210,12 +220,14 @@ Now lets create the actual ###SearchBar component
 2) Add the below lines of code:
 
     ```html
+
     <aura:component>
 
         <input type="text" class="form-control" onkeyup="{!c.searchKeyChange}"
                 placeholder="Search"/>
 
     </aura:component>
+
     ```
 -> This is a simple component with a single input field.
 -> When the user types in a character (**onkeyup**), the **searchKeyChange()** function is executed in the component's client-side controller. 
@@ -227,6 +239,7 @@ Now lets add some js code to enable the controller for the SearchBar component.
 Add the below lines of the code:
     
    ```javascript
+
     ({
         searchKeyChange: function(component, event, helper) {
             var myEvent = $A.get("e.SearchKeyChange");
@@ -234,6 +247,7 @@ Add the below lines of the code:
             myEvent.fire();
         }
     })
+
     ```
 -> The function first gets an instance of the **SearchKeyChange** event
 -> It then sets the event's searchKey parameter to the input field's new value
@@ -244,7 +258,9 @@ Click **File** > **Save** to save the file
 Now lets set-up the ContactList component to litsen to the event change by adding an event handler for the **SearchKeyChange** event (right after the init handler):
 
 ```html
+
  <aura:handler event="SearchKeyChange" action="{!c.searchKeyChange}"/>
+
  ```
 
 -> The handler is set up to execute the **searchKeyChange()** function in the controller
@@ -256,6 +272,7 @@ Now lets set-up the ContactList component to litsen to the event change by addin
 Before we add the search component to our app let's add the SearchKeyChange Js code to our ContactList controller
 
 ```javascript
+
     searchKeyChange: function(component, event) {
         var searchKey = event.getParam("searchKey");
         var action = component.get("c.findByName");
@@ -267,6 +284,7 @@ Before we add the search component to our app let's add the SearchKeyChange Js c
         });
         $A.enqueueAction(action);
     }
+    
 ```
 
 ![_config.yml]({{ site.baseurl }}/images/LGS/3.png)
@@ -278,6 +296,7 @@ Now lets develop our last component that display the details of the contact.
 2) Implement the component as follows:
 
 ```html
+
     <aura:component controller="ContactController">
 
         <aura:attribute name="contact" type="Contact" default="{'sobjectType': 'Contact'}"/>
@@ -292,6 +311,7 @@ Now lets develop our last component that display the details of the contact.
         </div>
 
     </aura:component>
+
 ```
 -> The controller assigned to the component refers to the **server-side controller** (ContactController).
 -> The **contact** attribute is defined to hold the displayed Contact.
@@ -301,6 +321,7 @@ Now lets develop our last component that display the details of the contact.
 Add the below js lines of code to controller.
 
 ```javascript
+
     ({
         locationChange : function(component, event, helper) {
             var token = event.getParam("token");
@@ -317,6 +338,7 @@ Add the below js lines of code to controller.
             }
         }
     })
+    
     ```
 -> The function first gets the new value of the hashtag available in the event object.
 -> It then parses the hashtag to extract the contact id and invokes the **findById()** method in our Apex controller.
@@ -325,6 +347,7 @@ Add the below js lines of code to controller.
 Now lets add all our components to our application as shown below:
 
     ```html
+    
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
@@ -336,6 +359,7 @@ Now lets add all our components to our application as shown below:
             </div>
         </div>
     </div>
+    
     ```
 
 ![_config.yml]({{ site.baseurl }}/images/LGS/4.png)
