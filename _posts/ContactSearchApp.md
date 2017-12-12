@@ -23,8 +23,7 @@ Lets get started by creating an Apex controller on Contact that handles all the 
 In Salesforce, click your name in the upper right corner of the screen. In the dropdown menu, click Developer Console.
 1) In the Developer Console, click File > New > Apex Class. Specify ContactController as the class name and click OK.
 
-2) 
-Implement the class as follows:
+2) Implement the class as follows:
 
 ```java
 public with sharing class ContactController {
