@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Dynamic Salesforce Lightning ContactSearch application in 10 minutes
+title:  Dynamic Salesforce Lightning Contact Search application in 10 minutes
 ---
 In this post, lets use the Lightning Components to build an application called ContactsFinder. The application provides quick access to your Salesforce Contacts within your org.
 The Lightning Application uses three Lightning Components: SearchBar, ContactList, and ContactDetails. These components communicate using Lightning events.
