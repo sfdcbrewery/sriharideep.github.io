@@ -347,4 +347,4 @@ Now lets add all our components to our application as shown below:
 
 Thanks to Christophe Coenraets
 Reosurces:
-[Lightning Getting Started]http://ccoenraets.github.io/salesforce-lightning-tutorial/index.html) on GitHub.
+[Lightning Getting Started](http://ccoenraets.github.io/salesforce-lightning-tutorial/index.html) on GitHub.
