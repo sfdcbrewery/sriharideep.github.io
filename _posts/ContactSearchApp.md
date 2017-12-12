@@ -93,9 +93,10 @@ Lets start by creating an lightning app that acts as a container to our Lightnin
     </aura:application>
 
     ```
-    -> The **link** tag references the bootstrap style sheet uploaded as a static resource in your org i.e. dist/css
-    -> The application uses Bootstrap to implement a basic layout for the application
-    -> Lightning applications can include Lightning components and regular HTML markup
+
+-> The **link** tag references the bootstrap style sheet uploaded as a static resource in your org i.e. dist/css
+-> The application uses Bootstrap to implement a basic layout for the application
+-> Lightning applications can include Lightning components and regular HTML markup
 
 1) Click **File** > **Save** to save the file
 
@@ -137,18 +138,17 @@ Lets start by creating the ContactList component that displays contacts in our a
     </aura:component>
 
     ```
-    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) we already created.
-    - The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
-    - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component's
-**client-side controller** (you'll implement the controller in the next step).
-    - ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` for each contact
-    - The ```<a href="{! '#contact/' + contact.Id }">``` anchor tag around the contact data is defined to set the page hashtag to **#contact/** followed by the contact id. 
-    In next few steps ContactDetails component also will use that hashtag to display details information every time the user clicks a new contact.
 
+-> The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) we already created.
+-> The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
+-> The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component's
+**client-side controller** (you'll implement the controller in the next step).
+-> ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` for each contact
+-> The ```<a href="{! '#contact/' + contact.Id }">``` anchor tag around the contact data is defined to set the page hashtag to **#contact/** followed by the contact id. 
+
+In next few steps ContactDetails component also will use that hashtag to display details information every time the user clicks a new contact.
 
 1. Click **File** > **Save** to save the file.
-
-
 Now lets implement the Controller by adding few lines of Javscript mentioned below:
 
 1) Click **CONTROLLER** on the right hand side.
@@ -168,12 +168,10 @@ Now lets implement the Controller by adding few lines of Javscript mentioned bel
     })
     
     ```
-
-    - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
-    - You first get a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
-    - Since the call to the server's findAll() method is asynchronous, you then register a callback function that is executed when the call returns. 
-      In the callback function, you simply assign the list of contacts to the component's **contacts** attribute.
-    - $A.enqueueAction(action) sends queue of asynchronous server calls. That queue is an optimization feature of Lightning.
+-> The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
+-> You first get a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
+-> Since the call to the server's findAll() method is asynchronous, you then register a callback function that is executed  when the call returns. In the callback function, you simply assign the list of contacts to the component's **contacts** attribute.
+-> $A.enqueueAction(action) sends queue of asynchronous server calls. That queue is an optimization feature of Lightning.
 
 3) Click **File** > **Save** to save the file
 
@@ -214,7 +212,9 @@ Let's start by creating a searchKeyChange event int he Developer Console:
 
 3) Click **File** > **Save** to save the file
 
+
 Now lets create the actual ###SearchBar component 
+
 1) In the Developer Console, click **File** > **New** > **Lightning Component**. Specify **SearchBar** as the bundle name and click **Submit**
 
 2) Add the below lines of code:
@@ -229,6 +229,7 @@ Now lets create the actual ###SearchBar component
     </aura:component>
 
     ```
+
 -> This is a simple component with a single input field.
 -> When the user types in a character (**onkeyup**), the **searchKeyChange()** function is executed in the component's client-side controller. 
 Using this approach the search is refined every time the user types in a character.
@@ -249,6 +250,8 @@ Add the below lines of the code:
     })
 
     ```
+
+
 -> The function first gets an instance of the **SearchKeyChange** event
 -> It then sets the event's searchKey parameter to the input field's new value
 -> Finally, it fires the event so that registered listeners can catch it
@@ -295,7 +298,8 @@ Now lets develop our last component that display the details of the contact.
 
 2) Implement the component as follows:
 
-```html
+
+  ```html
 
     <aura:component controller="ContactController">
 
@@ -312,7 +316,8 @@ Now lets develop our last component that display the details of the contact.
 
     </aura:component>
 
-```
+   ```
+
 -> The controller assigned to the component refers to the **server-side controller** (ContactController).
 -> The **contact** attribute is defined to hold the displayed Contact.
 -> In the ContactList , you wrapped each contact in the list with a ```<a href="{! '#contact/' + contact.Id }">``` anchor tag that sets the page hashtag to **#contact/** followed by the contact id of the clicked contact.
@@ -320,7 +325,7 @@ Now lets develop our last component that display the details of the contact.
        The locationChange() function implemented in the next step retrieves and displays the selected contact.
 Add the below js lines of code to controller.
 
-```javascript
+  ```javascript
 
     ({
         locationChange : function(component, event, helper) {
