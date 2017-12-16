@@ -177,10 +177,10 @@ I started using it for my trailhead projects to be future ready. Hey its from Sa
 Happy Coding!
 
 Useful References:
-[SFDX CLI Download](https://developer.salesforce.com/tools/sfdxcli) 
-[Salesforce DX Development Model Trail](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_dev_model)
-[App Development with Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_app_dev)
-[Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci)
-[Git and GitHub Basics](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/git-and-git-hub-basics)
-[Salesforce DX Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.html)
-[Wade Wegner about SFDX](http://www.wadewegner.com/)
+1. [SFDX CLI Download](https://developer.salesforce.com/tools/sfdxcli) 
+1. [Salesforce DX Development Model Trail](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_dev_model)
+1. [App Development with Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_app_dev)
+1. [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci)
+1. [Git and GitHub Basics](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/git-and-git-hub-basics)
+1. [Salesforce DX Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.html)
+1. [Wade Wegner about SFDX](http://www.wadewegner.com/)
