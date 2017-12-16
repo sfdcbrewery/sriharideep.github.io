@@ -1,20 +1,25 @@
-Salesforce DX [Develper Experience] Introduction
+Hello Salesforce DX a.k.a. Salesforce Developer Experience 
 
-This blog offers you all the excited you need as a Salesforce Developer to start with DX!
+This blog offers you all the excitement you need as a Salesforce Developer to start with DX!
+
+![_config.yml]({{ site.baseurl }}/images/HelloDX/1.png)
 
 If you are already excited then get the kick by trying out the below trial which introduces installation of Force.com CLI and related software and some knowledge of GitHub.
-Get Started with Salesforce DX
+[Get Started with Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_dev_model/units/sfdx_dev_model_neworganization)
 
 So what is all the noise about SFDX [Salesforce Developer Experience]?
 
 It is the an effort from Salesforce to shift the traditional monolithic org development paradigm to a modern modular artifact development.
 
+
+![_config.yml]({{ site.baseurl }}/images/HelloDX/2.png)
+
 So whats artifact?
 An artifact is a group of related code and customizations. An artifact can be tested independently from other components in your org. An artifact should be able to be released independently as well. The metadata components within an artifact can only live in one artifact at a time. 
 
-With Salesforce DX, by externalizing more of the metadata and the org shape in the form of artifacts, we can shift the app’s “source of truth” from the Salesforce org to a version control system. This standard source-driven development approach has been used by developers for years, and it’s now a core part of the Salesforce developer experience.
+![_config.yml]({{ site.baseurl }}/images/HelloDX/3.png)
 
-￼
+With Salesforce DX, by externalizing more of the metadata and the org shape in the form of artifacts, we can shift the app’s “source of truth” from the Salesforce org to a version control system. This standard source-driven development approach has been used by developers for years, and it’s now a core part of the Salesforce developer experience.
 
 The artifact driven model offers the below advantages:
 * Improved version control system (VCS) synchronization through change-tracking of Setup features
@@ -46,9 +51,9 @@ Scratch Orgs?
 Salesforce DX introduces a new type of Salesforce environment, the scratch org, a source-driven and disposable deployment of Salesforce code and metadata. Scratch orgs are fully configurable, allowing developers to emulate different editions with different features and preferences, playing a critical role in driving developer productivity and collaboration during the development process. They can also be used as part of automated testing and the implementation of a full continuous integration suite.
 
 How to create Dev Hub Org?
-To create a Dev Hub Environment, click here  
+To create a Dev Hub Environment, [click here](https://developer.salesforce.com/promotions/orgs/dx-signup)  
 
-For some geek satisfaction try, App Development hands on with Salesforce DX, click here
+For some geek satisfaction try, App Development hands on with Salesforce DX, [click here](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_app_dev/units/sfdx_app_dev_setup_dx)
 
 How to manage Scratch Orgs?
 We could do create and delete scratch org from Force.com CLI and from Dev-Hub we could manage scratch orgs as well. Here is the screen shot for Dev-Hub.
@@ -57,10 +62,11 @@ We could do create and delete scratch org from Force.com CLI and from Dev-Hub we
 Some commands for start up:
 
 Prerequisites:
-1. SFDC CLI installed on PC 
+1. SFDC CLI [installed on PC](https://developer.salesforce.com/tools/sfdxcli)  
 2. Have the Dev Hub credentials ready 
 
 Create a Dev-Hub org first we need to authorize the devhub by web login flow. You will have the credentials if you have signed-up using the link mentioned above. 
+
 ```
 sfdx force:auth:web:login -d -a DevHub
 ```
@@ -90,7 +96,7 @@ Salesforce Extensions for VS Code
 * Support for the real-time Apex Debugger
 It’s also pre-integrated with Git but can work with other version control systems.
 
-You can get more details not he VSCode extension from https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode
+You can get more details not he VSCode extension from [here] (https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 
 Now lets create a dummy project using the commands below:
 
@@ -102,7 +108,6 @@ sfdx force:project:create -n sfdcbrewery
 ```
 
 A Salesforce DX project is a local directory structure of your artifact source and Salesforce DX metadata that lets you develop and test with Salesforce DX tooling. It contains configuration files for creating scratch orgs. It can contain data to be loaded into orgs for development or testing. It should also contain tests that you rely on to validate your artifact. At a minimum, the project manages the source for one artifact. That being said, if multiple artifacts get built and released together, you can organize these artifacts into a single SFDX project. Each of your artifacts aligns to a package directory defined in the project configuration file.
-
 
 Go to the project folder and create a scratch org:
 
@@ -132,8 +137,9 @@ Set default user by using username:
 ```
 sfdx force:config:set defaultusername=yourusername@gmail.com
 
-``` 
+```
            OR
+           
 set default use by using alias:
 
 ```
@@ -156,8 +162,13 @@ sfdx force:source:pull
 ```
 
 You can use any VCS(Git & Github) to keep track of the development and avoid any coding conflicts. 
+![_config.yml]({{ site.baseurl }}/images/HelloDX/4.png)
 
-For hands-on CI, I recommend https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci which uses the power of GIt, Github and Travis CI. 
+For hands-on CI, I recommend [Trail](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci) which uses the power of GIt, Github and Travis CI. 
+
+You can also use Jenkins for CI.
+
+![_config.yml]({{ site.baseurl }}/images/HelloDX/5.png)
 
 In one line Salesforce DX is a rockstar to the Dev heroes who love command line. However, for admins this get very complicated and dry.
 
@@ -166,10 +177,10 @@ I started using it for my trailhead projects to be future ready. Hey its from Sa
 Happy Coding!
 
 Useful References:
-Force.com CLI
-Salesforce DX Development Model
-App Development with Salesforce DX
-Continuous Integration Using Salesforce DX
-Git and GitHub Basics
-Salesforce DX Setup Guide
-Wade Wegner Blog for SFDX
+[SFDX CLI Download](https://developer.salesforce.com/tools/sfdxcli) 
+[Salesforce DX Development Model Trail](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_dev_model)
+[App Development with Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_app_dev)
+[Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci)
+[Git and GitHub Basics](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/git-and-git-hub-basics)
+[Salesforce DX Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.html)
+[Wade Wegner about SFDX](http://www.wadewegner.com/)
