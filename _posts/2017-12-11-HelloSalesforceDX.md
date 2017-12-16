@@ -1,4 +1,4 @@
-Hello Salesforce DX a.k.a. Salesforce Developer Experience 
+***Hello Salesforce DX a.k.a. Salesforce Developer Experience 
 
 This blog offers you all the excitement you need as a Salesforce Developer to start with DX!
 
