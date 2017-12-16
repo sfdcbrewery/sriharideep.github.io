@@ -13,7 +13,10 @@ avatar: https://raw.githubusercontent.com/sfdcbrewery/sfdcbrewery.github.io/mast
 
 #
 # Flags below are optional
-#
+
+# Seo Plugin 
+plugins:
+  - jekyll-seo-tag
 
 # Includes an icon in the footer for each username you enter
 footer-links:
