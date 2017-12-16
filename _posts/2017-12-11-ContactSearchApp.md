@@ -344,5 +344,8 @@ Now lets add all our components to our application as shown below:
 ![_config.yml]({{ site.baseurl }}/images/LGS/4.png)
 
 
-Thanks to Christophe Coenraet.
+Thanks to Christophe Coenraets.
 [Lightning Getting Started](http://ccoenraets.github.io/salesforce-lightning-tutorial/index.html) on GitHub.
+
+
+Keywords: #SFDCBrewery #SriharideepKolagani #SalesforceDX #SalesforceDevelopment #Salesforce #SFDCBrewery #Brewery #SalesforceOnlineTraining #SalesforceTutorials #SalesforceCertification
