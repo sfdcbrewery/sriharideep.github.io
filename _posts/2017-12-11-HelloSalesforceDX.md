@@ -1,4 +1,7 @@
-***Hello Salesforce DX a.k.a. Salesforce Developer Experience 
+---
+layout: post
+title:  Hello Salesforce DX a.k.a. Salesforce Developer Experience 
+---
 
 This blog offers you all the excitement you need as a Salesforce Developer to start with DX!
 
@@ -184,3 +187,5 @@ Useful References:
 1. [Git and GitHub Basics](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/git-and-git-hub-basics)
 1. [Salesforce DX Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.html)
 1. [Wade Wegner about SFDX](http://www.wadewegner.com/)
+
+Keywords: #SFDCBrewery #SriharideepKolagani #SalesforceDX #SalesforceDevelopment #Salesforce #SFDCBrewery #Brewery #SalesforceOnlineTraining #SalesforceTutorials #SalesforceCertification
