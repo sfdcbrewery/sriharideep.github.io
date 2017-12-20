@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  You can not miss these if you a new developer in Salesforce Ohana.
+title:  Resources for new developer trailblazers.
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/newbies.jpg)
