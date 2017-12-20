@@ -5,18 +5,18 @@ title:  Create an awesome Facebook Messenger Bot integrated with Salesforce.
 
 ![_config.yml]({{ site.baseurl }}/images/Bot/bot.jpg)
 
-# Pre req -> Basic knowledge of below items:
-1. [Heroku]()
-1. [Salesforce Connected Apps]()
-1. [Node Js]()
-1. [Express App]()
-1. [Messenger Platform]() 
+### Pre req -> Basic knowledge of below items:
+1. [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
+1. [Salesforce Connected Apps](https://developer.salesforce.com/page/Connected_Apps)
+1. [Node Js](https://www.w3schools.com/nodejs/nodejs_intro.asp)
+1. [Express App](https://expressjs.com/en/starter/installing.html)
+1. [Messenger Platform](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start) 
 
 As a developer, I always see Salesforce as a platform which is more than a CRM on cloud. Out of that interest and some basic research online, I got to know that it is possible to integrate Messenger and Salesforce. Then after watching this [Dreamforce video of Christophe](https://www.youtube.com/watch?v=H9DKSRbuVYw) I decided to work on it. Today, I am going explain how to get started with the messenger Bot that can communicate with Salesforce. Hope you guys find it interesting. 
 
 ![_config.yml]({{ site.baseurl }}/images/Bot/Intubot.gif)
 
-# Salesforce Bot for Facebook Messenger
+### Salesforce Bot for Facebook Messenger
 
 A Salesforce-powered bot for the DreamHouse sample application.
 
