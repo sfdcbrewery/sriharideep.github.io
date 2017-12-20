@@ -26,8 +26,7 @@ When Salesforce launched 15 years ago, we didn’t yet know that it would become
 > [Featured content](https://developer.salesforce.com/content/type/Webinar/)
 
 1. Find a local user group to meet Salesforce enthusiasts online and in person. This is a great way to learn and talk about Salesforce in groups. You can also use meetup.com to find such groups.
-> [User groups](https://success.salesforce.com/featuredGroups)
-> [Meetups](https://www.meetup.com/?_cookie-check=MRDeyMo1Tslm8QyG)
+> [User groups](https://success.salesforce.com/featuredGroups)  [Meetups](https://www.meetup.com/?_cookie-check=MRDeyMo1Tslm8QyG)
 
 1.Look out for various online communities on [LinkedIn](https://www.linkedin.com/groups/3801982/profile), [Salesforce](https://developer.salesforce.com/forums/ForumsCategories), and even [Facebook](https://www.facebook.com/salesforcedevs) to discuss a variety of Salesforce-related topics in just few clicks.
 
