@@ -7,7 +7,7 @@ title:  Resources for new developer trailblazers.
 
 When Salesforce launched 15 years ago, we didn’t yet know that it would become one of the world’s most innovative and popular CRM systems. Due to its popularity and demand, many people are aligning their career to Salesforce. There are many resources out there for people who want to break into the Salesforce world. Here is our list of the top 11 resources that can help you get started and become a successful developer:
 
-1. Salesforce provides a free, full-featured copy of the platform to give you a feel of how Salesforce development works. It lets you play around with various features of Salesforce. It is the first thing you should have before moving on along the Salesforce learning path.
+Salesforce provides a free, full-featured copy of the platform to give you a feel of how Salesforce development works. It lets you play around with various features of Salesforce. It is the first thing you should have before moving on along the Salesforce learning path.
 > [Free developer account](https://developer.salesforce.com/signup)
 
 Trailhead is an interactive learning path for Salesforce developers, admins, and users. Various modules have been designed to take you through a step-by-step approach to learn Salesforce. You can also test your knowledge while earning points and badges as rewards.
