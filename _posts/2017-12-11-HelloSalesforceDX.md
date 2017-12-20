@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Hello Salesforce DX a.k.a. Salesforce Developer Experience 
+title:  Hello Salesforce DX a.k.a. Salesforce Developer Experience.
 ---
 
 This blog offers you all the excitement you need as a Salesforce Developer to start with DX!
@@ -18,7 +18,7 @@ It is the an effort from Salesforce to shift the traditional monolithic org deve
 ![_config.yml]({{ site.baseurl }}/images/HelloDX/2.png)
 
 So whats artifact?
-An artifact is a group of related code and customizations. An artifact can be tested independently from other components in your org. An artifact should be able to be released independently as well. The metadata components within an artifact can only live in one artifact at a time. 
+An artifact is a group of related code and customizations. An artifact can be tested independently from other components in your org. An artifact can be released independently as well. The metadata components within an artifact can only live in one artifact at a time. 
 
 ![_config.yml]({{ site.baseurl }}/images/HelloDX/3.png)
 
@@ -51,7 +51,7 @@ Dev Hub?
 A Developer Hub (Dev Hub) provides you and your team with the ability to create and manage scratch orgs. Scratch orgs are temporary Salesforce environments where you do the bulk of your development work in this new source-driven development paradigm.
 
 Scratch Orgs?
-Salesforce DX introduces a new type of Salesforce environment, the scratch org, a source-driven and disposable deployment of Salesforce code and metadata. Scratch orgs are fully configurable, allowing developers to emulate different editions with different features and preferences, playing a critical role in driving developer productivity and collaboration during the development process. They can also be used as part of automated testing and the implementation of a full continuous integration suite.
+Salesforce DX introduces a new type of Salesforce environment, the scratch org, a source-driven and disposable deployment of Salesforce code and metadata. Scratch orgs are fully configurable, allowing developers to emulate different editions with different features and preferences, playing a critical role in driving developer productivity and collaboration during the development process. They can also be used as part of automated testing and implementation of a full continuous integration suite.
 
 How to create Dev Hub Org?
 To create a Dev Hub Environment, [click here](https://developer.salesforce.com/promotions/orgs/dx-signup)  
@@ -62,7 +62,7 @@ How to manage Scratch Orgs?
 We could do create and delete scratch org from Force.com CLI and from Dev-Hub we could manage scratch orgs as well. Here is the screen shot for Dev-Hub.
 ￼
 
-Some commands for start up:
+Some commands for start-up:
 
 Prerequisites:
 1. SFDC CLI [installed on PC](https://developer.salesforce.com/tools/sfdxcli)  
@@ -119,7 +119,7 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a TestAppScratch
 
 ```
 
-Note: At the time of creating scratch org to test your project, there should be many things you should have in your mind. What about provisioned features, communities, applications, permissions, data and lot of things. I will try to cover that as much I can in my next posts.
+Note: At the time of creating scratch org to test your project, you should have many things in your mind: What about provisioned features, communities, applications, permissions, data etc. Don't worry, I will try to cover those in my future posts.
 
 To open the Scratch org:
 
@@ -143,7 +143,7 @@ sfdx force:config:set defaultusername=yourusername@gmail.com
 ```
            OR
            
-set default use by using alias:
+set default user by using alias:
 
 ```
 sfdx force:config:set defaultusername=devorg
@@ -174,9 +174,9 @@ You can also use Jenkins for CI.
 
 ![_config.yml]({{ site.baseurl }}/images/HelloDX/5.png)
 
-In one line Salesforce DX is a rockstar to the Dev heroes who love command line. However, for admins this get very complicated and dry.
+In one line, Salesforce DX is a rockstar to Dev heroes who love command line. However, for admins this gets very complicated and dry.
 
-I started using it for my trailhead projects to be future ready. Hey its from Salesforce, there is a value to it :)
+I started using it as part of my trailhead projects to be future ready. Hey it's from Salesforce, there is a value to it :)
 
 Happy Coding!
 
