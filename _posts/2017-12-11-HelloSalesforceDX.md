@@ -2,12 +2,10 @@
 layout: post
 title:  Hello Salesforce DX a.k.a. Salesforce Developer Experience.
 ---
-
-This blog offers you all the excitement you need as a Salesforce Developer to start with DX!
-
 ![_config.yml]({{ site.baseurl }}/images/HelloDX/1.png)
 
-If you are already excited then get the kick by trying out the below trial which introduces installation of Force.com CLI and related software and some knowledge of GitHub.
+This blog offers you all the excitement you need as a Salesforce Developer to start with DX!
+If you are already excited, get some kick by trying out the below trial which introduces installation of Force.com CLI and related software and some knowledge of GitHub.
 [Get Started with Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_dev_model/units/sfdx_dev_model_neworganization)
 
 So what is all the noise about SFDX [Salesforce Developer Experience]?
