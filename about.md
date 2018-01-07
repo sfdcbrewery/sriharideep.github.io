@@ -9,11 +9,11 @@ I am Sri Kolagani, an aspiring Salesforce developer living in Bay Area, Californ
 
 Below links offer quick teasers of my skillsets, interests and background.
 
-o	Lightning Out Online Resume App powered by Einstein Analytics and Node Js: [Desktop Only!](www.srisfdcresume.herokuapp.com)
+o	Lightning Out Resume App powered by Einstein Analytics and Node Js: [Desktop Only!](https://srisfdcresume.herokuapp.com)
 
 o	Check out my code and project ideas on Github: [Geek Stuff](https://www.sfdcbrewery.github.io)
 
-Send an InMail or a LinkedIn request: [Hitmeup!](https://www.Linkedin.com/in/sriharideep)
+## Send an InMail or a LinkedIn request: [Hitmeup!](https://www.Linkedin.com/in/sriharideep)
 
 Cheers,
 Sri Kolagani
