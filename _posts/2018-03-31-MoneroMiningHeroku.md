@@ -4,7 +4,7 @@ title:  Mine Monero on Heroku using Node.js
 ---
 ![_config.yml]({{ site.baseurl }}/images/monero/Monero.jpg)
 
-# Note: SFDC Brewery or Sri Kolagani does not endorse or support Monero & mining Monero on Heroku. This is just for demo purposes. 
+# Note: SFDC Brewery does not endorse or support Monero & mining Monero on Heroku. This is just for demo purposes. 
 
 # What is Monero?
 Monero is a secure, private, untraceable currency that is open-source and freely available to all. You are your own bank, you control and are responsible for your funds, and nobody can trace your transfers. For more information visit Monero official [website](https://getmonero.org/)
@@ -45,14 +45,14 @@ Monero is a secure, private, untraceable currency that is open-source and freely
 ![alt text](/images/monero/6.png)
 
 11) Login to your coin-hive account and verify you are receiving reward
------------------
+
 Note: After 30 minutes the heroku instance will go to sleep so be sure to sign up for another free service (https://uptimerobot.com/) which can ping your url every 5 minutes to make sure it stays up.
 
 # HAPPY MINING! 
 
 Get the full code [Git repo](https://github.com/sfdcbrewery/MoneroHerokuApp)
 
-#Warning: According to few responses, we observed Heroku suspending the accounts for mining inside it. So, try it on a Heroku demo org.
+# Warning: According to few responses, we observed Heroku suspending the accounts for mining inside it. So, try it on a Heroku demo org.
 
 If you like this article, consider reading:
 1. [Monero White Paper](https://github.com/monero-project/research-lab/blob/master/whitepaper/whitepaper.pdf)
