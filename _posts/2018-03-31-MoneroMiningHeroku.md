@@ -4,9 +4,9 @@ title:  Mine Monero on Heroku using Node.js
 ---
 ![_config.yml]({{ site.baseurl }}/images/monero/Monero.jpg)
 
-##Note: SFDC Brewery or Sri Kolagani does not endorse or support Monero & mining Monero on Heroku. This is just for demo purposes. 
+# Note: SFDC Brewery or Sri Kolagani does not endorse or support Monero & mining Monero on Heroku. This is just for demo purposes. 
 
-#What is Monero?
+# What is Monero?
 Monero is a secure, private, untraceable currency that is open-source and freely available to all. You are your own bank, you control and are responsible for your funds, and nobody can trace your transfers. For more information visit Monero official [website](https://getmonero.org/)
 
 # SFDC Brewery Monero miner
