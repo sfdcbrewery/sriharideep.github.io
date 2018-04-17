@@ -9,7 +9,7 @@ Policies move through three states:
 1. Available—Any policy you create, plus the example policies that Salesforce supplies. 
 1. Enabled—Available policies that the admin has “turned on,” shown by having Enabled checked. 
 1. Triggered—A policy that’s been activated. This happens when the event the policy monitors not only occurs, but occurs in such a way that the event meets the policy’s requirements. 
-![_config.yml]({{ site.baseurl }}/images/Transac/23.jpg)
+![_config.yml]({{ site.baseurl }}/images/Transac/23.png)
 A transaction security policy consists of events, notifications, and actions.
 * The available event types are:
     * Data Export for Account, Case, Contact, Lead, and Opportunity objects. Prevents unauthorized downloads.
@@ -34,10 +34,10 @@ These examples are just a few of the things you can do with Transaction Security
 
 In-order to enable the Transaction Security, go to Setup and enter Transaction in the Quick Find box, press Return, and click Transaction Security. If you’ve never visited this page before, select Enable custom transaction security policies and click Save to activate Transaction Security and install the supplied policies.
 ￼
-![_config.yml]({{ site.baseurl }}/images/Transac/21.jpg)
+![_config.yml]({{ site.baseurl }}/images/Transac/21.png)
 
 You can also create custom polices as shown in the picture below:
-![_config.yml]({{ site.baseurl }}/images/Transac/22.jpg)
+![_config.yml]({{ site.baseurl }}/images/Transac/22.png)
 
 Filter Policies to Ease Viewing
 

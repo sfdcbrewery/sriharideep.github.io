@@ -27,7 +27,7 @@ Lets start our investigation by logging into our very own [Workbench](https://wo
 1. select queries | SOQL Query.
 2. Under Object, choose EventLogFile. Under Fields, select count(). Notice that the editor populates with some query text.
 3. Click Query.
-![_config.yml]({{ site.baseurl }}/images/eventmonitoring/1.jpg)
+![_config.yml]({{ site.baseurl }}/images/eventmonitoring/1.png)
 ￼
 There are a total of 15 fields in the object. EventType and LogFile are the crucial ones though.
 * EventType: This field displays which event types a record represents. If you expand EventType, Picklist Values, you can see the different types of events. In our case, we’re interested in records with an EventType of Report Export.
@@ -37,11 +37,11 @@ To get more information about your organization’s Report Export events in Work
 1. In the top menu, select utilities | REST Explorer.
 2. Replace the existing text with /services/data/v41.0/query?q=SELECT+Id+,+EventType+,+LogDate+,+LogFileLength+,+LogFile+FROM+EventLogFile+ WHERE+EventType+=+'ReportExport'
 3. Click Execute.
-![_config.yml]({{ site.baseurl }}/images/eventmonitoring/2.jpg)
+![_config.yml]({{ site.baseurl }}/images/eventmonitoring/2.png)
 If no reports have been exported from your organization in the past 24 hours, the totalSize field has a value of zero. Remember that it takes 24 hours for events to become available. You can export a report from your organization and try again tomorrow. Alternatively, you can replace ReportExport with a different event type in your REST query (for example, Login).
 If you have some report export events, your execution returns something like this:
 
-![_config.yml]({{ site.baseurl }}/images/eventmonitoring/3.jpg)
+![_config.yml]({{ site.baseurl }}/images/eventmonitoring/3.png)
 
 Why are using REST if we can use a SOQL query?
 we see the other major difference between SOAP and REST when it comes to querying event log files. The returned log files are the same, but they’re presented in different formats. When you retrieve your event log files using SOAP, the result is a serialized, Base64 string. If your organization plans on using tools like Informatica to work with event log files, you want to use SOAP to retrieve your data. REST, on the other hand, deserializes the log file. It’s still not pretty, but as you’ll see in the upcoming section, other tools can transform the REST results into an easy-to-read format.
@@ -62,7 +62,7 @@ Using the event log file browser application is the most straightforward approac
 6. Click Apply.
 You’ll see something like this:
 ￼
-![_config.yml]({{ site.baseurl }}/images/eventmonitoring/4.jpg)
+![_config.yml]({{ site.baseurl }}/images/eventmonitoring/4.png)
 
 ## Download Event Log Files Using cURL Using a cURL script to download your event log files requires the following:
 1. Providing your Salesforce credentials
