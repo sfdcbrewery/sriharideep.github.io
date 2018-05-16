@@ -20,8 +20,7 @@ operating system with virtual access to host resources through a hypervisor. I
 
 ![_config.yml]({{ site.baseurl }}/images/Docker/1.png)
 
- 
-Container Use Cases
+## Container Use Cases
 Not all applications and organizations are going to have the same infrastructure requirements. The aforementioned benefits of containers make them particularly adept at addressing the following needs:
 
 1. DEVOPS ORGANIZATIONS
@@ -78,7 +77,6 @@ docker container ls -aq
 ```
  
 ## Docker 102 - Digging deeper into Docker concepts 
- 
 It is important to understand the below three components to get a holistic picture of docker:
 1. Stack - It helps defining the interactions of all the services
 1. Service - It defines how containers behave in production.
