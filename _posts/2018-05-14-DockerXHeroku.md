@@ -262,7 +262,7 @@ Hurray! now go to Heroku app again and you’ll see it live.
 Github repository is available [here](https://github.com/sfdcbrewery/dockerXheroku)
 
 
-One time to spin some containers, Happy Docking!
+Time to spin some containers, Happy Docking!
 
 References:
 1. [Docker getting started](https://docs.docker.com/get-started/)
