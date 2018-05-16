@@ -119,7 +119,6 @@ First, create a new directory where all the files would live. In this directory 
 }
  
 ```
- 
 With your new package.json file, run npm install. If you are using npm version 5 or later, this will generate a package-lock.json file which will be copied to your Docker image.
  
 Then, create a index.js file that defines a web app using the Express.js framework:
@@ -180,21 +179,20 @@ $ docker run -p 8081:8081 dockerxheroku
 When it runs, you can access it in your localhost using the browser.
    
 ￼![_config.yml]({{ site.baseurl }}/images/Docker/4.png)
-
  
-<div class="video"><iframe src="//player.vimeo.com/video/209565889?badge=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>z
- 
-You can see the abbreviated container ID with $docker container ls
-￼
+You can see the abbreviated container ID with 
 
+```
+
+$docker container ls
+
+```
 You can stop the container using the following command:
  
 ```
 docker container stop <CONTAINER_ID>
  
 ```
- 
- 
 The information transmitted, including any content in this communication is confidential, is intended only for the use of the intended recipient and is the property of the Western Union Company or its affiliates and subsidiaries. If you are not the intended recipient, you are hereby notified that any use of the information contained in or transmitted with the communication or dissemination, distribution, or copying of this communication is strictly prohibited. If you have received this communication in error, please notify the Western Union sender immediately by replying to this message and delete the original message
 
 ## Lets move the magic to Heroku
@@ -267,5 +265,5 @@ Github repository is available [here](https://github.com/sfdcbrewery/dockerXhero
 One time to spin some containers, Happy Docking!
 
 References:
-[Docker getting started](https://docs.docker.com/get-started/)
-[Heorku official](https://hub.docker.com/r/heroku/heroku/)
+1. [Docker getting started](https://docs.docker.com/get-started/)
+1. [Heorku official](https://hub.docker.com/r/heroku/heroku/)
