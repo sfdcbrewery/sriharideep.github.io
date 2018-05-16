@@ -21,6 +21,7 @@ operating system with virtual access to host resources through a hypervisor. I
 ![_config.yml]({{ site.baseurl }}/images/Docker/1.png)
 
 ## Container Use Cases
+
 Not all applications and organizations are going to have the same infrastructure requirements. The aforementioned benefits of containers make them particularly adept at addressing the following needs:
 
 1. DEVOPS ORGANIZATIONS
@@ -76,7 +77,8 @@ docker container ls -aq
  
 ```
  
-## Docker 102 - Digging deeper into Docker concepts 
+## Docker 102 - Digging deeper into Docker concepts
+
 It is important to understand the below three components to get a holistic picture of docker:
 1. Stack - It helps defining the interactions of all the services
 1. Service - It defines how containers behave in production.
@@ -140,7 +142,6 @@ app.listen(8081, function () {
  
  
 ```
- 
 Create a .dockerignore file in the same directory as your Dockerfile with following content:
  
 ```
@@ -148,7 +149,6 @@ node_modules
 npm-debug.log
  
 ```
- 
 This will prevent your local modules and debug logs from being copied onto your Docker image and possibly overwriting modules installed within your image.
  
 ## Building your image 
@@ -176,8 +176,10 @@ $ docker run -p 8081:8081 dockerxheroku
  
 When it runs, you can access it in your localhost using the browser.
    
+
 ￼![_config.yml]({{ site.baseurl }}/images/Docker/4.png)
  
+
 You can see the abbreviated container ID with 
 
 ```
