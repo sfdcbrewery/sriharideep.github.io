@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Docker X Heroku - Deploy and run docker apps in Heroku in 15 min   
+title:  REST API in Peace with GraphQL on Heroku    
 
 ---
-![_config.yml]({{ site.baseurl }}/images/gql/graphql.jpeg)
+![_config.yml]({{ site.baseurl }}/images/gql/graphql.jpg)
 
 GraphQL is a data query language developed by Facebook under MIT license. It is not tied to any specific database or specific programming language or storage.
 
