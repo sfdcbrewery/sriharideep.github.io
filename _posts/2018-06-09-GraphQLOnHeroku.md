@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  REST API in Peace with GraphQL on Heroku    
+title:  Put the REST API to Peace with GraphQL on Heroku    
 
 ---
 ![_config.yml]({{ site.baseurl }}/images/gql/graphql.jpg)
