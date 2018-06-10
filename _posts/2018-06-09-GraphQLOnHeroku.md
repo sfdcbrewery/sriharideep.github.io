@@ -261,4 +261,4 @@ Lets shift our gears towards sustainable and prodcutive API implementation with 
 Github repository is available [here](https://github.com/sfdcbrewery/Heroku-GraphQL)
 
 Resources:
-(GraphQL official documentation)[https://graphql.org/learn/]
+[GraphQL official documentation](https://graphql.org/learn/)
