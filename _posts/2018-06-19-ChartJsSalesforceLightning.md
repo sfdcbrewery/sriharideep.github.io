@@ -18,6 +18,7 @@ Before we create the lightning component, lets add the Chart.js library as a sta
 ￼
 Lets create a Lightning component, I named mine as Chart.cmp. Include the static resource that holds the chart.js library in the component as we include the library in the canvas element which will be used to draw the chart. All the standard attribute like the height and width of the canvas can be adjusted to fit the desired dimensions.The component code is mentioned below:
 
+
 ```
 <aura:component controller="GraphController" implements="flexipage:availableForAllPageTypes" access="global">
 	<ltng:require scripts="{!$Resource.Chart}" afterScriptsLoaded="{!c.ctr}"/>
@@ -90,6 +91,7 @@ public class GraphController {
 
 
 Now lets call the Apex controller from our Lightning component controller. This will also enable us to set and handle the response.
+
 
 ```
 ({	
@@ -181,7 +183,8 @@ Below is the Helper function that can help us create the actual charts using the
 ```
 
 Voila! You can see your chart live in action now
- inside the lightning app.  To be able to access this component in Lightning app build make sure your that the component implements=”flexipage:availableForAllPageTypes” which allows the components to be embedded in the lightning flexipages. 
+inside the lightning app.  To be able to access this component in Lightning app build make sure your that the component implements=”flexipage:availableForAllPageTypes” which allows the components to be embedded in the lightning flexipages. 
+ 
 ![_config.yml]({{ site.baseurl }}/images/gql/42.png)
 ![_config.yml]({{ site.baseurl }}/images/gql/43.png)
 
