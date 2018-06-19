@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  Data Visualization using Chart.js in Salesforce Lightning Components    
+
 ---
 ![_config.yml]({{ site.baseurl }}/images/gql/chartjs.png)
+
+
 As we all know a developer is never satisfied with out of the box features of any tools and often hunts for some new means to enhance the existing functionalities.  Though Salesforce provides some amazing out of the box functionalities to build reports and charts I always loved using ChartsJS for my reporting. ChartJS comes handy when we have lot of custom logic and filters to be implemented in a lightning component. The charts can be added on the pages using the App Builder’s “Standard Report Chart” component. The report filters can be used to display relevant data on the charts. This out-of-the-box component satisfies most requirements. But the filters have their limitations. ChartJS is a third-party component that provides interactive visualization components that can come handy in lightning component development. 
 
 This post will focus on building custom visualization lightning components using Charts.JS
