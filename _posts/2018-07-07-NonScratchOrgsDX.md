@@ -2,7 +2,7 @@
 layout: post
 title:  Salesforce CLI for non-scratch orgs 
 ---
-![_config.yml]({{ site.baseurl }}/images/DX/DX.jpg)
+![_config.yml]({{ site.baseurl }}/images/DX/dx.jpg)
 
 This blog post takes a deep dive on how to use DX for all developer, Prod and Non-prod Salesforce environments other than scratch orgs. 
 
