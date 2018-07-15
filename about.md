@@ -10,7 +10,8 @@ I am Sri Kolagani, a Sr. Salesforce Programmer Analyst at Western Union Business
 I am a TrailheaDX 2018 speaker, Salesforce evangelist and founder of SFDC Brewery. I am always open for challenging Salesforce Technical Leadership roles in a workplace that has scope for holistic growth and advancement. 
 
 Below links offer quick teasers of my skillsets, interests and background.
-o   Link to article featuring Sri Kolagani in Salesforce: https://t.co/PqDKpq7Lmc
+
+o   Link to article featuring Sri Kolagani in Salesforce:: [BeABuilder!](https://t.co/PqDKpq7Lmc)
 
 o	Lightning Out Resume App powered by Einstein Analytics and Node Js: [Desktop Only!](https://srisfdcresume.herokuapp.com)
 
