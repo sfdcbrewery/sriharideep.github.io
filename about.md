@@ -5,9 +5,12 @@ permalink: /about/
 ---
 ![_config.yml]({{ site.baseurl }}/images/me.jpg)
 
-I am Sri Kolagani, an aspiring Salesforce developer living in Bay Area, California. I have three fantastic years of Salesforce development experience in different roles: developer, admin and freelancer. I started Salesforce as a part-time freelancer on Upwork during my Graduate school days at California State University, Chico. Through my career fair, I was fortunate to work on real-time SFDC projects in BayArea for companies like Intuitive Surgical and Hitachi. With my experience, my interest in pursuing a career as Salesforce developer also spiked up. This blog is my initiative to motivate anyone and everyone with a thought of becoming a Salesforce developer. Here I will be sharing all my knowledge, code samples and resourceful information with a hope to motivate people around me to come join the Salesforce Ohana. 
+I am Sri Kolagani, a Sr. Salesforce Programmer Analyst at Western Union Business Solutions, San Francisco- CA with four fantastic years of Salesforce experience in different roles: developer, admin and freelancer. In my current job role at Western Union, I take ownership of the leading the development on Salesforce Platform. I started my trailblazer journey as a freelancer and later went on to work for top firms like Intuitive Surgical and Hitachi Vantara. I have an MBA in Enterprise Information Systems from California State University, Chico with an exceptional 3.6 GPA. 
+
+I am a TrailheaDX 2018 speaker, Salesforce evangelist and founder of SFDC Brewery. I am always open for challenging Salesforce Technical Leadership roles in a workplace that has scope for holistic growth and advancement. 
 
 Below links offer quick teasers of my skillsets, interests and background.
+o   Link to article featuring Sri Kolagani in Salesforce: https://t.co/PqDKpq7Lmc
 
 o	Lightning Out Resume App powered by Einstein Analytics and Node Js: [Desktop Only!](https://srisfdcresume.herokuapp.com)
 
