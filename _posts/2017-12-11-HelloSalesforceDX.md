@@ -163,9 +163,6 @@ sfdx force:source:pull
 ```
 
 You can use any VCS(Git & Github) to keep track of the development and avoid any coding conflicts. 
-
-![_config.yml]({{ site.baseurl }}/images/HelloDX/4.png)
-
 For hands-on CI, I recommend [Trail](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci) which uses the power of GIt, Github and Travis CI. 
 
 You can also use Jenkins for CI.
