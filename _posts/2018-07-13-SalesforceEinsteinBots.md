@@ -58,7 +58,7 @@ Now lets proceed with the Dialog creation. Let us create a question in Link dial
 In this demo lets go with dynamic options which means a customer response will be dynamically interpreted using the best matching intent. For this to work we need to create Intent. Enter all the ways your customers phrase this intent. Einstein Bots require a minimum of 20 customer inputs but 150 or more is ideal. The more variations that you provide, the better the bot understands your customers. Einstein Intent Sets support customer inputs in English. Use correct spellings — the bot recognizes misspellings. I have added my customer inputs as shown in the picture below:
 ![_config.yml]({{ site.baseurl }}/images/EBots/E11.png)
 
- When we test the bot, it is won't be able to interpret the question as you can see below:
+ When we test the bot, it won't be able to interpret the question as you can see below:
  
  ![_config.yml]({{ site.baseurl }}/images/EBots/E12.png)
  
