@@ -21,15 +21,15 @@ plugins:
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: sriharideep@live.com
   facebook:
   flickr:
   github: sfdcbrewery
-  instagram:
+  instagram: sriharideep
   linkedin: sriharideep
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: 
+  twitter: SriKolagani
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
