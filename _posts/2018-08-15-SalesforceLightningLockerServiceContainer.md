@@ -57,10 +57,11 @@ The Lightning Container Component(lightning:container) is a convenience componen
 ## Lightning Container Component Advantages
 1. Isolation capability in the browser client side
 2. Support for any third-party library, including ones that are not LockerService compliant.
-3. Lightning Container Component Limitations
-4. Limited communication mechanism between components (postMessage)
-5. Components are constrained to a rectangle area on the page. Content may be clipped, rich interactions like drag-and-drop between components may not work, etc.
-6. Heavier/Slower. If there are multiple iframes on a page, each iframe loads its own version of libraries.
+
+## Lightning Container Component Limitations
+1. Limited communication mechanism between components (postMessage)
+2. Components are constrained to a rectangle area on the page. Content may be clipped, rich interactions like drag-and-drop between components may not work, etc.
+3. Heavier/Slower. If there are multiple iframes on a page, each iframe loads its own version of libraries.
 
 ## Conclusion 
 As Lightning keeps maturing with the best industry practices, it is always a good developer practice to question the use of DOM manipulation libraries. Locker Service should always be our first choice as it delivers performance and security without losing the native Lightning identity. You can always use lightning:container if your target library doesn't support LockerService.
