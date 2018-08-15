@@ -19,7 +19,7 @@ o	Check out my code and project ideas on Github: [Geek Stuff](https://www.sfdcbr
 
 ## Send an InMail or a LinkedIn request: [Hitmeup!](https://www.Linkedin.com/in/sriharideep)
 
-Cheers,
+Cheers, /n
 Sri Kolagani
 
 ### Contact me
