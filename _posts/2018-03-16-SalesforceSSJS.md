@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  Introduction to Server Side Java Script for Marketing Cloud 
----
-![_config.yml]({{ site.baseurl }}/images/Alexa/1/SSJS.jpg)
+--- ![_config.yml]({{ site.baseurl }}/images/Alexa/1/SSJS.jpg)
 
 ## Introduction 
 The Marketing Cloud uses JavaScript code processed by Marketing Cloud servers. Instead of using the browser to render the JavaScript on the client-side computer, Marketing Cloud executes the JavaScript on the server when rendering. While you can duplicate the functionality of AMPscript using SSJS, SSJS does not work with the DOM and will not function with exterior libraries. Instead, use libraries provided by Marketing Cloud to create SSJS that works within landing pages. All functions native to JavaScript, such as arrays, math functions, the EVAL function, and try catch blocks, work with SSJS. SSJS interacts with Marketing Cloud via several libraries. Write your code to work with these libraries in order to work with the information in your Marketing Cloud account. These libraries allow SSJS to be updated while maintaining previous versions in order to avoid breaking preexisting code. You can use all commands and syntax outlined in the JavaScript specifications as part of your SSJS offerings. We use Script tags to delineate Js blocks to be processed by the app. 
