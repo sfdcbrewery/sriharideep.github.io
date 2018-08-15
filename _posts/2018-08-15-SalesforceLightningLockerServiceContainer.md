@@ -67,6 +67,6 @@ The Lightning Container Component(lightning:container) is a convenience componen
 As Lightning keeps maturing with the best industry practices, it is always a good developer practice to question the use of DOM manipulation libraries. Locker Service should always be our first choice as it delivers performance and security without losing the native Lightning identity. You can always use lightning:container if your target library doesn't support LockerService.
 
 ## Resources:
-1. [Locker Service Developer Guide] (https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/security_code.htm)
+1. [Locker Service Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/security_code.htm)
 2. [Lightning Container Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/container_overview.htm)
 3. [Christophe Blog](https://developer.salesforce.com/blogs/2018/04/lightning-container-component-building-components-with-react-angular-and-other-libraries.html)
