@@ -13,7 +13,7 @@ Below links offer quick teasers of my skillsets, interests and background.
 
 o Link to article featuring Sri Kolagani in Salesforce:: [BeABuilder!](https://t.co/PqDKpq7Lmc)
 
-o	Lightning Out Resume App powered by Einstein Analytics and Node Js: [Resume](https://goo.gl/ArFF3M)
+o	Lightning Out Resume App: [Resume](https://goo.gl/ArFF3M)
 
 o	Check out my code and project ideas on Github: [Geek Stuff](https://www.sfdcbrewery.github.io)
 
