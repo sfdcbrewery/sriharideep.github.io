@@ -5,7 +5,7 @@ title:  Analyzing Salesforce Lightning Locker Service and Lightning Container Co
 ![_config.yml]({{ site.baseurl }}/images/Locker/Lockerh.jpg)
 
 ## Introduction 
-In this blog post, let’s discuss how to build secure applications using Lightning Component framework. Today, we can build application using Salesforce components, third-party components and even own custom components built from scratch. We are always tempted to use DOM manipulation third party libraries like jQuery to ease the development. Today Lightning Component Framework is abstract enough to take over DOM manipulation libraries like jQuery leading to more robust and maintainable code. We can also question ourselves using the UI libraries like Bootstrap which lack the Lightning identity hindering the Salesforce user experience. Lightning Component Framework offer out of the box tightly coupled components easing the whole application development process on Salesforce on par with MVC frameworks like AnglarJS and ReactJS. It is always important to avoid the security exploits caused by improper level of component isolation. Without the right level of isolation, a vulnerability in one component can provide access to sensitive data in other components and jeopardize the security of the entire system. To tackle this Lightning Component Framework provides two isolation mechanisms: LockerService and the Lightning Container Component.
+In this blog post, let’s discuss how to build secure applications using Lightning Component framework. Today, we can build applications using Salesforce components, third-party components and even our own custom components built from scratch. We are always tempted to use DOM manipulation third party libraries like jQuery to ease the development. Today Lightning Component Framework is abstract enough to take over DOM manipulation libraries like jQuery leading to more robust and maintainable code. We can also question ourselves using the UI libraries like Bootstrap which lack the Lightning identity hindering the Salesforce user experience. Lightning Component Framework offer out of the box tightly coupled components easing the whole application development process on Salesforce on par with MVC frameworks like AnglarJS and ReactJS. It is always important to avoid the security exploits caused by improper level of component isolation. Without the right level of isolation, a vulnerability in one component can provide access to sensitive data in other components and jeopardize the security of the entire system. To tackle this Lightning Component Framework provides two isolation mechanisms: LockerService and the Lightning Container Component.
 
 ## What is LockerService Isolation?
 LockerService ensures a component can only traverse the DOM and access elements created by a component in the same namespace. This behavior prevents the anti-pattern of reaching into DOM elements owned by components in another namespace. Apart from the namespace based restrictions, Locker Service also enforces JavaScript ES5 strict mode and Content Security Policy (CSP) ensuring XSS free safe and best code.
@@ -32,7 +32,7 @@ Example:
 })
 
 ```
-We get an error as in the last line of the controller we are trying to Access the DOM element which is c namespace different from the slider thats in Lightning namespace.
+We get an error as in the last line of the controller we are trying to access the DOM element which is in c namespace different from the slider thats in Lightning namespace.
 ![_config.yml]({{ site.baseurl }}/images/Locker/error.png)
 
 ## LockerService Advantages
@@ -63,7 +63,7 @@ The Lightning Container Component(lightning:container) is a convenience componen
 6. Heavier/Slower. If there are multiple iframes on a page, each iframe loads its own version of libraries.
 
 ## Conclusion 
-As Lightning keeps maturing with the best industry practices, it is always a good developer practice to question the use too DOM manipulation libraries going forward. Locker Service should always be our first choice as it delivers performance and security without losing the native Lightning identity. You can always use lightning:container if your target library doesn’t support LockerService.
+As Lightning keeps maturing with the best industry practices, it is always a good developer practice to question the use of DOM manipulation libraries. Locker Service should always be our first choice as it delivers performance and security without losing the native Lightning identity. You can always use lightning:container if your target library doesn't support LockerService.
 
 ## Resources:
 1. [Locker Service Developer Guide] (https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/security_code.htm)
