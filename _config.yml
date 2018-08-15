@@ -25,14 +25,14 @@ footer-links:
   facebook:
   flickr:
   github: sfdcbrewery
-  instagram:sriharideep
+  instagram: sriharideep
   linkedin: sriharideep
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:SriKolagani
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: u/2/116181922267170564033
+  googleplus: /116181922267170564033
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
