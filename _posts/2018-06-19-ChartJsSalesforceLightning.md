@@ -1,11 +1,8 @@
 ---
 layout: post
-<<<<<<< HEAD
 title:  Data Visualization using Chart.js in Salesforce Lightning Components    
-=======
-title:  Data Visualization using Chart.js in Salesforce Lightning Components 
->>>>>>> b9932df97dcb879f1534718ebcb0bbc531120645
 ---
+
 ![_config.yml]({{ site.baseurl }}/images/gql/chartjs.png)
 
 
