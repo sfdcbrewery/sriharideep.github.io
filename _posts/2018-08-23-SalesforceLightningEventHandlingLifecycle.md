@@ -15,7 +15,7 @@ Application events follow a traditional publish-subscribe model. An application 
 Always, try and use component events over application events for an effective containment hierarchy. Now WTH is containment hierarchy? It is a tree of components that has a top-level container as its root. 
 Events are fired by user actions and events which are results of actions and are different from app and comp events mentioned above. There are also System events that is fired automatically by the framework during its lifecycle, such as during component initialization, change of an attribute value, and rendering. 
 
-Assuming that you have some basic knowledge of Lightning events, lets Digg deeper into Component and application events. 
+Assuming that you have some basic knowledge of Lightning events, lets Dig deeper into Component and application events. 
 ## Component Event Propagation
 The framework supports capture and bubble phases for the propagation of component events similar to DOM handling patterns. This gives an opportunity for interested components to interact with an event and potentially control the behavior for subsequent handlers.
 
@@ -94,6 +94,7 @@ You can find the example [here](https://developer.salesforce.com/docs/atlas.en-u
 ## Event Handling Lifecycle
 
 The following chart from the developer documentation summarizes how the framework handles events:
+
 ![_config.yml]({{ site.baseurl }}/images/LEH/214.jpg)
 
 ## Resources:
