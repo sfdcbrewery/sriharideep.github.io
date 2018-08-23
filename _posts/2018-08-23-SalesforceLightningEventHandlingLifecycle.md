@@ -98,5 +98,5 @@ The following chart from the developer documentation summarizes how the framewor
 ![_config.yml]({{ site.baseurl }}/images/LEH/214.jpg)
 
 ## Resources:
-1. [Documentation](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/events_intro.htm)
-2. [Blog](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/events_intro.htm)
+1.[Documentation](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/events_intro.htm)
+2.[Blog](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/events_intro.htm)
