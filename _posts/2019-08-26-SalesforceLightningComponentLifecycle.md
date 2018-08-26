@@ -46,6 +46,7 @@ You should go with custom renderer only if:
 A renderer file is part of the component bundle and is auto-wired if you follow the naming convention, <componentName>Renderer.js. For example, the renderer for sample.cmp would be in sampleRenderer.js.
 
 ## Here is the code that demonstrates custom render un-render and re-render:
+
 ![_config.yml]({{ site.baseurl }}/images/LCL/render.gif) 
 
 ```
@@ -64,9 +65,7 @@ A renderer file is part of the component bundle and is auto-wired if you follow 
     </aura:if>
     <ui:button aura:id="button" label="re-Render" press="{!c.update}"/>
 </aura:component>
-```
 
-```
 // c1Controller.js
 ({
     update : function(component, event, helper) {
@@ -76,9 +75,6 @@ A renderer file is part of the component bundle and is auto-wired if you follow 
     } 
 })
 
-```
-
-```
 //c1Renderer.js
 ({
     render: function(cmp, helper) {
@@ -92,15 +88,11 @@ A renderer file is part of the component bundle and is auto-wired if you follow 
     },
 })
 
-
-```
-C2.cmp
+//C2.cmp
 <aura:component >
   I am alive!
 </aura:component>
-```
 
-```
 //c2Renderer.js
 ({
     unrender : function (cmp, helper) {
@@ -108,13 +100,12 @@ C2.cmp
         return this.superUnrender();
     },
 })
-```
 
-```
 // Render.app
 <aura:application >
     <c:c1 />
 </aura:application>
+
 ```
 
 ## PS:
@@ -124,6 +115,6 @@ C2.cmp
 4. For third party libraries, use un-render to make the app faster and smarter. 
 5. Try to use the framework provided render() event as a best practice. 
 
-Resources:
+## Resources:
 1. [Chawa](https://balkishankachawa.wordpress.com/2015/12/21/different-rendering-behavior-of-lightning-component/)
 2. [Documentation](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_lifecycle.htm)
