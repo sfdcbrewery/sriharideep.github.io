@@ -170,20 +170,19 @@ The load balancer you provisioned in the previous step will start routing traffi
 After completing this tutorial, follow these steps to remove the following resources to prevent unwanted charges incurring on your account:
 Delete the Service: This step will deallocate the Cloud Load Balancer created for your Service: 
 
-``` 
-kubectl delete service hello-web  
-``` 
+```
+kubectl delete service hello-web
+```
 Wait for the Load Balancer provisioned for the hello-web Service to be deleted: The load balancer is deleted asynchronously in the background when you run kubectl delete. Wait until the load balancer is deleted by watching the output of the following command: 
 
-``` 
-gcloud compute forwarding-rules list  
+```
+gcloud compute forwarding-rules list
 
-``` 
+```
 Delete the container cluster: This step will delete the resources that make up the container cluster, such as the compute instances, disks and network resources. 
 
-``` 
-gcloud container clusters delete hello-cluster  
-
+```
+gcloud container clusters delete hello-cluster
 ```
 
 Salesforce also uses Kubenretes to manage and scale its infrastructure. [Steve Sandke’s session](https://www.youtube.com/watch?v=D7TjzmzvPco) session at Cloud Native Con 2017 talks about how Kubernetes is used to achieve the mission of Software defined everything at Salesforce  Simple model:
