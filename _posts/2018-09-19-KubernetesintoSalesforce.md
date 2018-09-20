@@ -11,20 +11,22 @@ If you’re not running Kubernetes or a similar automated system, you might find
 1. One instance of your app (a complete machine instance or just a container) goes down.
 2. Because your team has monitoring set up, this pages the person on call.
 3. The on-call person has to go in, investigate, and manually spin up a new instance.
-4. Depending how your team handles DNS/networking, the on-call person may also need to also update the service discovery mechanism to point at the IP of the new Rails instance rather than the old. 
+4. Depending how your team handles DNS/networking, the on-call person may also need to also update the service discovery mechanism to point at the IP of the new Rails instance rather than the old.
+
 This process can be tedious and also inconvenient, especially if (2) happens in the early hours of the morning!
 If you have Kubernetes set up, however, manual intervention is not as necessary. The Kubernetes control plane, which runs on your cluster’s master node, gracefully handles (3) and (4) on your behalf. As a result, Kubernetes is often referred to as a self-healing system.
 
 There are two key parts to the Kubernetes control pane:
-# Kubernetes API server
+## Kubernetes API server
 For Kubernetes to be useful, it needs to know what sort of cluster state you want it to maintain. Your YAML or JSON configuration files declare this desired state in terms of one or more API objects, such as Deployments. To make updates to your cluster’s state, you submit these files to the Kubernetes API server (kube-apiserver).
 Examples of state include but are not limited to the following:
 * The applications or other workloads to run
 * The container images for your applications and workloads
 * Allocation of network and disk resources
+
 Note that the API server is just the gateway, and that object data is actually stored in a highly available datastore called etcd. For most intents and purposes, though, you can focus on the API server. Most reads and writes to cluster state take place as API requests.
 
-# Controllers
+## Controllers
 Once you’ve declared your desired state through the Kubernetes API, the controllers work to make the cluster’s current state match this desired state. The standard controller processes are kube-controller-manager and cloud-controller-manager, but you can also write your own controllers as well.
 All of these controllers implement a control loop. For simplicity, you can think of this as the following:
 ￼![_config.yml]({{ site.baseurl }}/images/kube/1.png)
@@ -35,11 +37,13 @@ If you don't already have a Google Account (Gmail or Google Apps), you must [cr
 # Deploying a containerized web application
 This tutorial shows you how to package a web application in a Docker container image, and run that container image on a Kubernetes Engine cluster as a load-balanced set of replicas that can scale to the needs of your users.
 
-# Pre-requesites:
+## Pre-requesites:
 Enable the Kubernetes Engine API:
 1. Visit the [Kubernetes Engine page](https://console.cloud.google.com/projectselector/kubernetes?_ga=2.214341588.-2112586366.1537392230&_gac=1.121364986.1537402551.CjwKCAjw54fdBRBbEiwAW28S9vDk_8CYVWKrrduHHHV_TBiyfmdQfzGQPo0gZpRy_PazpWQpxD-BoxoC1EEQAvD_BwE) in the Google Cloud Platform Console.
 2. Create or select a project.
 3. Wait for the API and related services to be enabled. 
+
+## Hands-on exercise
 
 Using Google Cloud Shell, which comes preinstalled with the gcloud, docker, and kubectlcommand-line tools used in this tutorial. If you use Cloud Shell, you don’t need to install these command-line tools on your workstation.
 To use Google Cloud Shell:
@@ -164,28 +168,43 @@ Multiple instances of your application running independently of each other and y
 The load balancer you provisioned in the previous step will start routing traffic to these new replicas automatically.
 
 After completing this tutorial, follow these steps to remove the following resources to prevent unwanted charges incurring on your account:
-Delete the Service: This step will deallocate the Cloud Load Balancer created for your Service: ``` kubectl delete service hello-web  ``` 
-Wait for the Load Balancer provisioned for the hello-web Service to be deleted: The load balancer is deleted asynchronously in the background when you run kubectl delete. Wait until the load balancer is deleted by watching the output of the following command: ``` gcloud compute forwarding-rules list  ``` 
-Delete the container cluster: This step will delete the resources that make up the container cluster, such as the compute instances, disks and network resources. ``` gcloud container clusters delete hello-cluster  ```
+Delete the Service: This step will deallocate the Cloud Load Balancer created for your Service: 
 
-Salesforce also uses Kubenretes to manage and scale its infrastructure. [Steve Sandke’s session]() session at Cloud Native Con 2017 talks about how Kubernetes is used to achieve the mission of Software defined everything at Salesforce  Simple model:
+``` 
+kubectl delete service hello-web  
+``` 
+Wait for the Load Balancer provisioned for the hello-web Service to be deleted: The load balancer is deleted asynchronously in the background when you run kubectl delete. Wait until the load balancer is deleted by watching the output of the following command: 
+
+``` 
+gcloud compute forwarding-rules list  
+
+``` 
+Delete the container cluster: This step will delete the resources that make up the container cluster, such as the compute instances, disks and network resources. 
+
+``` 
+gcloud container clusters delete hello-cluster  
+
+```
+
+Salesforce also uses Kubenretes to manage and scale its infrastructure. [Steve Sandke’s session](https://www.youtube.com/watch?v=D7TjzmzvPco) session at Cloud Native Con 2017 talks about how Kubernetes is used to achieve the mission of Software defined everything at Salesforce  Simple model:
 1. Deployment artifacts are containers
 2. Provide a health probe 
 3. Declare your desired deployment state 
 
-Here are the reasons why we should consider Microservices over monolithic software: Service ownership - Move from monolithic software model to smaller 
-Recovery- oriented software architectures
-Scale out architectures 
-Simple and consistent hardware 
-Improve availability of platform 
+## Here are the reasons why we should consider Microservices over monolithic software: 
+1. Service ownership - Move from monolithic software model to smaller 
+2. Recovery- oriented software architectures
+3. Scale out architectures 
+4. Simple and consistent hardware 
+5. Improve availability of platform 
 
-Here are the reason why you should consider Kubernetes?
-Open source, container based 
-High development velocity 
-Opportunity to effect direction 
-Opp to build it 
-Broad based community 
-Project vision aligned with our own. 
+## Here are the reason why you should consider Kubernetes?
+1. Open source, container based 
+2. High development velocity 
+3. Opportunity to effect direction 
+4. Opp to build it 
+5. Broad based community 
+6. Project vision aligned with our own. 
 
 I strongly recommend watching [Steve Sandke’s session](https://www.youtube.com/watch?v=D7TjzmzvPco) to understand how Salesforce is putting Kubernetes into action to scale the infrastructure. 
 
