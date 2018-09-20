@@ -2,6 +2,7 @@
 layout: post
 title:  Kubernetes introduction and how it's helping Salesforce scale
 ---
+
 ![_config.yml]({{ site.baseurl }}/images/kube/kube.jpg)
 
 This blog post is for everyone who want to understand Kubernetes and how it is helping Salesforce scale. As in my previous blogposts, lets learn Kubernetes with a Hands-on exercise.
