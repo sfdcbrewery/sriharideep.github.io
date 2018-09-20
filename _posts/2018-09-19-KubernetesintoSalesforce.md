@@ -197,7 +197,7 @@ Salesforce also uses Kubenretes to manage and scale its infrastructure. [Steve S
 4. Simple and consistent hardware 
 5. Improve availability of platform 
 
-## Here are the reason why you should consider Kubernetes?
+## Here are the reasons why you should consider Kubernetes?
 1. Open source, container based 
 2. High development velocity 
 3. Opportunity to effect direction 
