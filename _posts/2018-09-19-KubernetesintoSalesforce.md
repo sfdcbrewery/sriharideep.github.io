@@ -2,6 +2,8 @@
 layout: post
 title:  Kubernetes introduction and how it's helping Salesforce scale
 ---
+![_config.yml]({{ site.baseurl }}/images/kube/kube.jpg)
+
 This blog post is for everyone who want to understand Kubernetes and how it is helping Salesforce scale. As in my previous blogposts, lets learn Kubernetes with a Hands-on exercise.
 As an app developer it is very important to understand the value that Kubernetes brings in more than the architecture. Say that your team is deploying an ordinary Node application. You’ve run some calculations and determined that you need five instances of your app running at any given time, in order to handle external traffic.
 If you’re not running Kubernetes or a similar automated system, you might find the following scenario familiar:
