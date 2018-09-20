@@ -129,7 +129,7 @@ Now see the Pod created by the deployment.
 kubectl get pods
 
 ```
-￼￼![_config.yml]({{ site.baseurl }}/images/kube/7.png)
+￼￼![_config.yml]({{ site.baseurl }}/images/kube/6.png)
 
 By default, the containers you run on GKE are not accessible from the Internet, because they do not have external IP addresses. You must explicitly expose your application to traffic from the Internet, run the following command:
 
@@ -138,9 +138,13 @@ kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 
 
 ```
 GKE assigns the external IP address to the Service resource—not the Deployment. If you want to find out the external IP that GKE provisioned for your application, you can inspect the Service with the kubectl get service command:
-￼
+
+￼￼￼![_config.yml]({{ site.baseurl }}/images/kube/7.png)
+
 Once you've determined the external IP address for your application, you can try visiting it in your browser.
-￼
+
+￼￼￼![_config.yml]({{ site.baseurl }}/images/kube/8.png)
+
 You add more replicas to your application's Deployment resource by using the kubectl scale command. To add two additional replicas to your Deployment (for a total of three), run the following command:
 
 ```
@@ -180,9 +184,9 @@ Opp to build it
 Broad based community 
 Project vision aligned with our own. 
 
-I strongly recommend watching [Steve Sandke’s session]() to understand how Salesforce is putting Kubernetes into action to scale the infrastructure. 
+I strongly recommend watching [Steve Sandke’s session](https://www.youtube.com/watch?v=D7TjzmzvPco) to understand how Salesforce is putting Kubernetes into action to scale the infrastructure. 
 
-Resources:
+# Resources:
 1. [Google Cloud Platform](https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app)
 2. [Bringing Kubernetes into Salesforce - Steve Sandke, Salesforce](https://www.youtube.com/watch?v=D7TjzmzvPco)
 
