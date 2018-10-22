@@ -6,7 +6,7 @@ title:  Adios Notes & Attachments! Aloha Salesforce Files! - An introduction to 
 ![_config.yml]({{ site.baseurl }}/images/Filescan/sfdcbrewerysalesforcefiles.jpg)
 
 This is the first blog post in Salesforce Files series. In total three blog posts, I would like to introduce Salesforce Files, discuss the data model and demonstrate a proof of concept on how we can scan the Salesforce files using third-party security software tools.  
-# Salesforce Files - an introduction (Blog -1) 
+## Salesforce Files - an introduction (Blog -1) 
 Its time to peace out the war between Documents, Content, Attachments, and Files within Salesforce. Salesforce Files offers a streamlined approach that unifies your files, documents, and libraries into a single place for easier management & collaboration . Below are some of the highlights of the Files home:
 1. Access all the files you own or have access to.
 ![_config.yml]({{ site.baseurl }}/images/Filescan/screen1.png)
@@ -14,7 +14,7 @@ Its time to peace out the war between Documents, Content, Attachments, and Files
 3. You can attach files that can go with the records. All file types from Microsoft® PowerPoint® presentations and Excel® spreadsheets to Adobe® PDFs, images, and audio and video files are support. Hurray! 
 4. Access the files directly from the list with preview which also includes controls for downloading, sharing, or deleting the current file, uploading a new version of the file, editing file details, generating a public link to the file, and switching to full-screen mode for presentations.
 5. With Files you can also access the files in your external repositories like Quip, Box, Google Drive, Dropbox etc. 
-![_config.yml]({{ site.baseurl }}/images/Filescan/2.png)
+![_config.yml]({{ site.baseurl }}/images/Filescan/screen2.png)
 6. Files also offer versioning that helping businesses to streamline better. 
 7. Follow and receive updates about a file in the Chatter feed. 
 8. If Files Connect is enabled in your org, browse, search, and share files stored in an external data source right from Salesforce
@@ -22,7 +22,7 @@ Its time to peace out the war between Documents, Content, Attachments, and Files
 Files is the way to go to attach some files to an opportunity, account, or other records. Adios Notes & Attachments! If you are in classic and want the functionality to attach Files to Notes & Attachments, change the org preference to have files that are added to the list. 
 
 Now lets see why Salesforce files is a fun trail to blaze:
-![_config.yml]({{ site.baseurl }}/images/Filescan/3.png)
+![_config.yml]({{ site.baseurl }}/images/Filescan/screen3.png)
 Its now a no-brainer, Files are the best way to go. Attachments will eventually be deprecated, so to help slow their proliferation, users can’t create new attachments in Lightning Experience but they can still be accessed in the read-only mode.  If you are using Salesforce CRM Content in your org, then keep smiling as you do not have do anything in LEX. Content libraries are automatically converted to Salesforce Files and accessible from Files home via the Libraries filter.  Its also time to ditch documents and consider using asset folder in Salesforce Files as they are no longer supported in Lightning experience. 
 
 ## Checklist for Salesforce Files goodness:
