@@ -10,27 +10,29 @@ In first half of blog post lets discuss the data model of Content in Salesforce 
 ![_config.yml]({{ site.baseurl }}/images/Content/file.png)
 
 ContentDocument - Represents a document that has been uploaded to a library in Salesforce CRM Content or Salesforce Files. The maximum number of documents that can be published is 30,000,000. Archived files count toward this limit and toward storage usage limits.
-* Contact Manager, Group, Professional, Enterprise, Unlimited, and Performance Edition customers can publish a maximum of 200,000 new versions per 24-hour period.
-* Developer Edition and trial users can publish a maximum of 2,500 new versions per 24-hour period
-ContentDocumentHistory - Represents the history of a document. A user can query all versions of a document from their personal library and any version that is part of or shared with a library where they are a member, regardless of library permissions.
-ContentDocumentLink - Represents the link between a Salesforce CRM Content document or Salesforce file and where it's shared. A file can be shared with other users, groups, records, and Salesforce CRM Content libraries
-ContentDocumentListViewMapping - Represents an association between a ListView and a Quip ContentDocument. Applies to Quip file types only. Maintains the mapping between a list view and Quip document when the list view is exported to a newly created Quip document.
-ContentDocumentSubscription - Represents a subscription for a user following or commenting on a file in a library. 
-ContentFolder - Represents a folder in a content library for adding files. 
-ContentFolderItem - Represents a file (ContentDocument) or folder (ContentFolder) that resides in a ContentFolder in a ContentWorkspace. 
-ContentFolderLink - Defines the association between a library and its root folder.
-ContentVersion - Represents a specific version of a document in Salesforce CRM Content or Salesforce Files.
+1. Contact Manager, Group, Professional, Enterprise, Unlimited, and Performance Edition customers can publish a maximum of 200,000 new versions per 24-hour period.
+1. Developer Edition and trial users can publish a maximum of 2,500 new versions per 24-hour period
+
+* ContentDocumentHistory - Represents the history of a document. A user can query all versions of a document from their personal library and any version that is part of or shared with a library where they are a member, regardless of library permissions.
+* ContentDocumentLink - Represents the link between a Salesforce CRM Content document or Salesforce file and where it's shared. A file can be shared with other users, groups, records, and Salesforce CRM Content libraries
+* ContentDocumentListViewMapping - Represents an association between a ListView and a Quip ContentDocument. Applies to Quip file types only. Maintains the mapping between a list view and Quip document when the list view is exported to a newly created Quip document.
+* ContentDocumentSubscription - Represents a subscription for a user following or commenting on a file in a library. 
+* ContentFolder - Represents a folder in a content library for adding files. 
+* ContentFolderItem - Represents a file (ContentDocument) or folder (ContentFolder) that resides in a ContentFolder in a ContentWorkspace. 
+* ContentFolderLink - Defines the association between a library and its root folder.
+* ContentVersion - Represents a specific version of a document in Salesforce CRM Content or Salesforce Files.
 The maximum number of versions that can be published in a 24-hour period is 200,000.
 Note: Depending on how files are shared, queries on ContentDocument and ContentVersion without specifying an ID won't return all files a user has access to. For example, if a user only has access to a file because they have access to a record that the file is shared with, the file won't be returned in a query such as "SELECT Id FROM ContentDocument."
-ContentWorkspace -  represents a content library excluding the personal libraries. 
-ContentWorkspaceDoc -Represents a link between a document and a public library in Salesforce CRM Content. 
-ContentWorkspaceMember - Represents a member of a content library.
-ContentWorkspacePermission - Represents a library permission.
-ContentWorkspaceSubscription - Represents a subscription for a user following a library.
-ContentAsset - Represents a Salesforce file that has been converted to an asset file in a custom app in Lightning Experience. Use asset files for org setup and configuration.
-ContentBody - Represents the body of a file in Salesforce CRM Content or Salesforce Files.
-ContentDistribution - Represents information about sharing a document externally. 
-ContentDistributionView - The read-only object which represents information about views of a shared document.   
+* ContentWorkspace -  represents a content library excluding the personal libraries. 
+* ContentWorkspaceDoc -Represents a link between a document and a public library in Salesforce CRM Content. 
+* ContentWorkspaceMember - Represents a member of a content library.
+* ContentWorkspacePermission - Represents a library permission.
+* ContentWorkspaceSubscription - Represents a subscription for a user following a library.
+* ContentAsset - Represents a Salesforce file that has been converted to an asset file in a custom app in Lightning Experience. Use asset files for org setup and configuration.
+* ContentBody - Represents the body of a file in Salesforce CRM Content or Salesforce Files.
+* ContentDistribution - Represents information about sharing a document externally. 
+* ContentDistributionView - The read-only object which represents information about views of a shared document.   
+
 ### Customer and Partner Portal users must have the “View Content in Portal” permission to query content in libraries where they have access. 
 
 As mentioned in the previous post Files are here to replace Attachments in Salesforce. If document is uploaded in Salesforce Lightning experience today, it becomes part of Files/Content in Salesforce. Files can be shared across objects which means having a attachment with multiple parents. We all being uploading attachment in different ways one and of the ways is via Apex. Each time a file is uploaded a new record of ContentDocument object gets created. Content Version who is child of ContentDocument is required to perform programmatic actions on Files. 

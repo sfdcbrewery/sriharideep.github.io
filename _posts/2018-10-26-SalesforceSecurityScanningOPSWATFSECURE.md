@@ -48,14 +48,17 @@ trigger contentVersionTriggerScan on ContentVersion (after insert) {
 ```
 
 We are calling the Metadefender API from the trigger to initiate the scan. This involves a two step process involving one POST and one GET call. First make a POST call to the API with the file body and API key in the header. In the response, we get the data_Id which will be used to get the scan status that is used in the next step. The response is as below:
- ``` {
+
+```
+{
     "data_id": "ZDE4MTAxNnJ5dml1OW9tc21CeU9qT2NqWGpt",
     "status": "inqueue",
     "in_queue": 3,
     "queue_priority": "normal",
     "rest_ip": "api.metadefender.com/v2"
 }
- ```
+
+```
 Once we have the data_id, we will make a GET request to Metadefender API which will return scan status in the JSON response as below:
 
 ```
@@ -357,7 +360,8 @@ Once we have the data_id, we will make a GET request to Metadefender API which w
     }
 }
 
-``` Refer the API docs of the OPSWAT Metadefender Cloud [here](https://onlinehelp.opswat.com/mdcloud/). Here is Future class that handles the API calls and response updates. 
+```
+Refer the API docs of the OPSWAT Metadefender Cloud [here](https://onlinehelp.opswat.com/mdcloud/). Here is Future class that handles the API calls and response updates. 
 
 ```
 public class metaCallouts {
@@ -397,6 +401,7 @@ public class metaCallouts {
          upsert cdstatus;      
         }      
 }
+
 ```
 Apart from making two subsequent API calls, we are programmatically adding a delay to make the second API call that gets us the scan status. To have the scan status associated with the ContentVersion for future reporting and use, a Status custom field is created in ContentVersion object. At the end off the future call, Status custom field is updated in the associated ContentVersion record. Here is a small POC demo fo a Lightning component that uploads a file and gives the scan status on submit. 
 
