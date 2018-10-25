@@ -1,7 +1,6 @@
 ---
 layout: post
-title:  Salesforce content security - File scanning with OPSWAT & F-Secure 
-(Blog-3)
+title:  Salesforce content security - File scanning with OPSWAT & F-Secure (Blog-3)
 ---
 ![_config.yml]({{ site.baseurl }}/images/Content/security.jpg)
 
