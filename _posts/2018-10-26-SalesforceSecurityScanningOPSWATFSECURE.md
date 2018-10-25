@@ -3,7 +3,6 @@ layout: post
 title:  Salesforce content security - File scanning with OPSWAT & F-Secure 
 (Blog-3)
 ---
-
 ![_config.yml]({{ site.baseurl }}/images/Content/security.jpg)
 
 Salesforce at the moment, doesn’t provide a way to scan attachments, document uploads, or chatter for viruses or malicious content. This is a huge security risk for all Salesforce users, especially when a Salesforce application is publicly exposed through communities and sites.com. . From the info-sec perspective, desktop virus scanners or BYOD installations do not meet the cut for Salesforce, especially if using communities or sites. Simply put, any file that is uploaded to Salesforce brings with it the opportunity to carry a virus, malware, or unintended active content. There are four main avenues for delivery of these types of files within Salesforce:
