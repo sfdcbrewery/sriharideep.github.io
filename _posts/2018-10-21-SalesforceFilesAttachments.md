@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Adios Notes & Attachments! Aloha Salesforce Files! - An introduction to Salesforce Files management and collaboration. 
+title:  Adios Notes & Attachments! Aloha Salesforce Files! - An introduction to Salesforce Files management and collaboration. (Blog-1)
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/Filescan/sfdcbrewerysalesforcefiles.jpg)
