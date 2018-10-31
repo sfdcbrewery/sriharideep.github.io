@@ -5,7 +5,7 @@ title:  Blazing Salesforce Files - Deep dive into Salesforce content data model 
 
 ![_config.yml]({{ site.baseurl }}/images/Content/banner.jpg)
 
-In first half of blog post lets discuss the data model of Content in Salesforce ecosystem. In the second half, lets talk how we can access the Content programmatically using Apex and achieve similar functionalities we have in the case of an attachment. Here is the data-model of the content in Salesforce:
+In the first half of blog post lets discuss the data model of Content in Salesforce ecosystem. In the second half, let's talk about how we can access the Content programmatically using Apex and achieve similar functionalities we have in the case of an attachment. Here is the data model of the content in Salesforce: ￼
 ￼
 ![_config.yml]({{ site.baseurl }}/images/Content/file.png)
 
@@ -35,7 +35,7 @@ Note: Depending on how files are shared, queries on ContentDocument and ContentV
 
 ### Customer and Partner Portal users must have the “View Content in Portal” permission to query content in libraries where they have access. 
 
-As mentioned in the previous post Files are here to replace Attachments in Salesforce. If document is uploaded in Salesforce Lightning experience today, it becomes part of Files/Content in Salesforce. Files can be shared across objects which means having a attachment with multiple parents. We all being uploading attachment in different ways one and of the ways is via Apex. Each time a file is uploaded a new record of ContentDocument object gets created. Content Version who is child of ContentDocument is required to perform programmatic actions on Files. 
+As mentioned in the previous post Files are here to replace Attachments in Salesforce. If a document is uploaded in Salesforce Lightning experience today, it becomes part of Files/Content in Salesforce. Files can be shared across objects which means having an attachment with multiple parents. We all upload attachments in different ways and one of the many ways is via Apex. Each time a file is uploaded a new record of ContentDocument object gets created. Content Version who is a child of ContentDocument is required to perform programmatic actions on Files.
 
 ```
 String yourFiles = 'Lets assume this is your binary string of the files';
