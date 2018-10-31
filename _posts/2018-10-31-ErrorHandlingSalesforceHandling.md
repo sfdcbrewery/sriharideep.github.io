@@ -4,14 +4,14 @@ title:  Art of error-handling in Salesforce Lightning Components
 ---
 ![_config.yml]({{ site.baseurl }}/images/Content/error.jpg)
 
-Journey of Lightning components to server-side controller involves many potential failure points that are often taken granted by us, the developers. In this blog, lets learn the art of error handling for Lightning components. Most of the Lightning applications rely on Apex to perform backend operations such as accessing and modifying data.
+The journey of Lightning components to server-side controller involves many potential failure points that are often taken granted by us, the developers. In this blog, let's learn the art of error handling for Lightning components. Most of the Lightning applications rely on Apex to perform backend operations such as accessing and modifying data.
 Here is the routine request-response pattern of a typical lightning application:
 * Request the Apex controller using a server-side action.
 * The controller processes the requests and all the regular Apex exceptions are applicable. 
 * After the transaction, Apex controller sends a response to the Lightning component controller or helper which are on client-side.
 * The Lightning  controller or helper processes the response in a callback function which sometimes can cause client-side errors (unexpected response).
 
-In the above mentioned journey, there is probability of getting trapped into server-side and client-side errors. Taking about the server-side controllers the below piece of code throws a null-pointer exception. 
+In the above mentioned journey, there is a probability of getting trapped into server-side and client-side errors. Taking about the server-side controllers the below piece of code throws a null-pointer exception. 
 ```
     try {
 		string s;
@@ -24,7 +24,7 @@ In the above mentioned journey, there is probability of getting trapped into ser
     }
     
 ```
-Now, lets see how we can handle the above error in a Lightning friendly way. 
+Now, let's see how we can handle the above error in a Lightning friendly way. 
 Thankfully, the solution to this problem is quite simple.
 1. Use Try-catch block to make sure the exceptions are caught.
 2. Throw an AuraHandledException in the catch block. This allows you to provide a custom user-friendly error message.
@@ -79,7 +79,7 @@ console.error(errorData.name +" (code "+ errorData.code +"): "+ errorData.messag
 
 ```
 
-Client-side errors on the other hand can bet trivial which can be caused by a remote technical error such as an AuraHandledException or a value that does not meet certain business rules. Here is the Lightning function that can handle the apex response on client-side:
+Client-side errors on the other hand can be trivial which can be caused by a remote technical error such as an AuraHandledException or a value that does not meet certain business rules. Here is the Lightning function that can handle the apex response on client-side:
 
 ```
 // Server-side action callback
@@ -138,7 +138,7 @@ let toastParams = {
 
 ```
 
-Its healthy to use try-catch blocks on alien-side controllers too as shown below:
+It's healthy to use try-catch blocks on client-side controllers too as shown below:
 
 ```
 try {
