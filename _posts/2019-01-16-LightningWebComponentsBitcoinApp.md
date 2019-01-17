@@ -10,7 +10,7 @@ As a developer, we often fall in love with one framework until a next batter one
 
 ## Web Components Era 
 
-Everyone here must have used <form>,  <select> etc and build pages out of these tags. They had encapsulation, they had default UI, they would emit events when something interesting happened. The way we build pages on the web these days, we either copy & paste chunks of HTML from CSS libraries like Bootstrap or litter our pages with all sorts of JavaScript frameworks and plugins. On top of that, reusing components from different frameworks in the same page isn't always possible. This means our pages end up with bloated CSS, bloated JavaScript or both. What if HTML was expressive enough to allow us to extend HTML so we can fill in the gaps in functionality with our own tags? Well, Web Components enable that. W3C specifications that make Web Components are below:
+Everyone here must have used form tag,  select tag etc and build pages out of these tags. They had encapsulation, they had default UI, they would emit events when something interesting happened. The way we build pages on the web these days, we either copy & paste chunks of HTML from CSS libraries like Bootstrap or litter our pages with all sorts of JavaScript frameworks and plugins. On top of that, reusing components from different frameworks in the same page isn't always possible. This means our pages end up with bloated CSS, bloated JavaScript or both. What if HTML was expressive enough to allow us to extend HTML so we can fill in the gaps in functionality with our own tags? Well, Web Components enable that. W3C specifications that make Web Components are below:
 
 1. Custom Elements lets you define your own HTML tags;
 1. HTML Templates enables you to define blocks of markup with the ability to inject dynamic content into;
@@ -30,9 +30,8 @@ If you are a trailblazer who prefers using cool LDS functions for single records
 * @wire(getRecord): Your choice for more control over the UI or access data without a UI.
 Static schema and dynamic schema are two ways to implement record forms. Static schema ensures referential integrity while dynamic schema supports agnostic components endorsing loose coupling between Model & View.
 
-
 ## Calling Apex from LWC
-Fin order to work with Apex from LWC the Apex methods must be imported. Once imported, you can invoke an Apex method using two different approaches:
+In order to work with Apex from LWC the Apex methods must be imported. Once imported, you can invoke an Apex method using two different approaches:
 * Imperative Apex: You call the imported method like any other asynchronous function in JavaScript. The function call returns a promise.
 * Using @wire: You use the @wire decorator to wire the imported method to a component property or function. The wired method is automatically invoked when parameter values are initialized and is invoked again whenever parameter values change.
 
@@ -43,18 +42,18 @@ As a quick hands-on exercise, let’s build an application that utilizes imperat
 ```
 // sfdcBtcPrice.cls
 public with sharing class sfdcBtcPrice {
-@AuraEnabled(cacheable=true)
-public static String getBTCPrice() {
-string url = 'https://blockchain.info/tobtc?currency=USD&value=1';
-Http h = new Http();
-HttpRequest req = new HttpRequest();
-req.setEndpoint(url);
-req.setMethod('GET');
-        
-HttpResponse res = h.send(req);
-String BTCprice = (string)(res.getBody());
-return BTCprice;
-}
+    @AuraEnabled(cacheable = true)
+    public static String getBTCPrice() {
+        string url = 'https://blockchain.info/tobtc?currency=USD&value=1';
+        Http h = new Http();
+        HttpRequest req = new HttpRequest();
+        req.setEndpoint(url);
+        req.setMethod('GET');
+
+        HttpResponse res = h.send(req);
+        String BTCprice = (string)(res.getBody());
+        return BTCprice;
+    }
 }
 
 ```
@@ -62,29 +61,29 @@ return BTCprice;
 To get an Apex class in action we need to import in the LWC JavaScript source file as below:
 
 ```
-//sfdcBtcPrice.js
 import apexMethod from '@salesforce/apex/Namespace.Classname.apexMethod';
 
 ```
 In our case, to get our Apex class in action we need to add the below code to the Javascript source file of LWC.
 
 ```
+//sfdcBtcPrice.js
 import { LightningElement, track } from 'lwc';
 import getContactList from '@salesforce/apex/sfdcBtcPrice.getBTCPrice';
 
 export default class ApexImperativeMethod extends LightningElement {
-@track BTCPrice;
-@track error;
+    @track BTCPrice;
+    @track error;
 
-handleLoad() {
-getBTCPrice()
-.then(result => {
-this.BTCPrice = result;
-})
-.catch(error => {
-this.error = error;
-});
-}
+    handleLoad() {
+        getBTCPrice()
+            .then(result => {
+                this.BTCPrice = result;
+            })
+            .catch(error => {
+                this.error = error;
+            });
+    }
 }
 
 
@@ -92,25 +91,27 @@ this.error = error;
 
 As this is an imperative Apex approach, we are not actually using @wire but we are still using @track. It lets you re-render the value in the template whenever an action occurs.
 
-Finally, the HTML template of the LWC uses the if:true directive to check for the JavaScript BTCPrice property. If the error property exists, the component renders <c-error-panel>.
+Finally, the HTML template of the LWC uses the if:true directive to check for the JavaScript BTCPrice property. If the error property exists, the component renders c-error-panel tag.
 
 
 ```
-<!— sfdcBtcPrice.js —> <template>
-<lightning-card title="Bitcoin Price Now App" icon-name="custom:custom17">
-<div class="slds-m-around_medium">
-<p class="slds-m-bottom_small">
-<lightning-button label="Get BTC Price" onclick={handleLoad}></lightning-button>
-</p>
-<template if:true={BTCPrice}>
-1 USD = {BTCPrice} BTC
-</template>
-<template if:true={error}>
-<c-error-panel errors={error}></c-error-panel>
-</template>
-</div>
-</lightning-card>
-</template>
+< !— sfdcBtcPrice.html —>
+    <template>
+        <lightning-card title="Bitcoin Price Now App" icon-name="custom:custom17">
+            <div class="slds-m-around_medium">
+                <p class="slds-m-bottom_small">
+                    <lightning-button label="Get BTC Price" onclick={handleLoad}></lightning-button>
+                </p>
+                <template if:true={BTCPrice}>
+                    1 USD = {BTCP rice} BTC
+                </template>
+                <template if:true={error}>
+                    <c-error-pane l errors={error}>
+                        </c-error-panel>
+                </template>
+            </div>
+        </lightning-card>
+    </template>
 
 
 ```
@@ -124,18 +125,16 @@ Also to make sure the Bitcoin Price Now LWC is available or all record, app and 
 <!— sfdcBtcPrice.js-meta.xml —>
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn=“sfdcBtcPrice”>
-<apiVersion>45.0</apiVersion>
-<isExposed>true</isExposed>
-<targets>
-<target>lightning__AppPage</target>
-<target>lightning__RecordPage</target>
-<target>lightning__HomePage</target>
-</targets>
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
 </LightningComponentBundle>
 
-
 ```
-
 ## Resources:
 1. [Developer Guide](https://developer.salesforce.com/docs/component-library/documentation/lwc/apex)
 2. [Developer Blog](https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components-recipes-patterns-and-best-practices.html)
