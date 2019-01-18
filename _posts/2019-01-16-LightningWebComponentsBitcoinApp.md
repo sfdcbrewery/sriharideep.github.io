@@ -119,7 +119,7 @@ Finally, the HTML template of the LWC uses the if:true directive to check for th
 Here is the demo of the working component:
 ![_config.yml]({{ site.baseurl }}/images/lwcbtc/btc.gif)
 
-Also to make sure the Bitcoin Price Now LWC is available or all record, app and homepages your metadata file needs to tweaked as below:
+Also to make sure the Bitcoin Price Now LWC is available for all record, app and homepages, your metadata file needs to be tweaked as below:
 
 ```
 <!— sfdcBtcPrice.js-meta.xml —>
