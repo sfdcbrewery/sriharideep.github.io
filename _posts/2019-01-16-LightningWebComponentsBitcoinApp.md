@@ -6,7 +6,7 @@ title:  Building Bitcoin Price App with Lightning Web Components
 
 ## Frameworks - repetition is constant 
 
-As a developer, we often fall in love with one framework until a next batter one arrives. Once the better one arrives, we start learning and building new apps with new frameworks. The evolution of frameworks is constant and so is their learning curve. Even though it is advantageous, it takes a lifetime to give constant love to a single framework like Lightning, React, Angular etc. We always need to rinse, wash and repeat ;) Frameworks pull us in a million different directions and train us to do things from the framework author’s perspective. These practices might be good, bad, or completely new concepts. 
+As a developer, we often fall in love with one framework until a next better one arrives. Once the better one arrives, we start learning and building new apps with new frameworks. The evolution of frameworks is constant and so is their learning curve. Even though it is advantageous, it takes a lifetime to give constant love to a single framework like Lightning, React, Angular etc. We always need to rinse, wash and repeat ;) Frameworks pull us in a million different directions and train us to do things from the framework author’s perspective. These practices might be good, bad, or completely new concepts. 
 
 ## Web Components Era 
 
