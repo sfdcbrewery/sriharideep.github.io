@@ -11,14 +11,17 @@ Heroku is the world’s most effective cloud development platform for building a
 3. Data Services 
 4. Security
 
-In this blog post, lets uncover how *collaboration* can add value to Heroku Flow. Heroku Flow is one stop solution that brings together Heroku Pipelines,  Review Apps, Heroku CI (https://www.heroku.com/continuous-integration) and GitHub integrations into an easy-to-use structured workflow for continuous delivery. With no further delay, let's setup our Heroku integration with Github:
+In this blog post, lets uncover how *collaboration* can add value to Heroku Flow. Heroku Flow is one stop solution that brings together Heroku Pipelines, Review Apps, Heroku CI and GitHub integrations into an easy-to-use structured workflow for continuous delivery. With no further delay, let's setup our Heroku Pipelines and integrate it with Github:
+
 1) Login to Heroku and create an application with pipeline with defaulted to staging.
 ![_config.yml]({{ site.baseurl }}/images/Slack/1.png)
 
 2) Configure automatic deploys and connect Github. 
+
 ![_config.yml]({{ site.baseurl }}/images/Slack/2.png)
 
 3) Enable review apps which will create a new app every-time a pull request is raised in Github. Also, add a PROD app with the master branch. 
+
 ![_config.yml]({{ site.baseurl }}/images/Slack/3.png)
 
 4) Enable Heroku CI for automated tests 
@@ -28,21 +31,22 @@ In this blog post, lets uncover how *collaboration* can add value to Heroku Flow
 6) Merge the PR to deploy to staging.
 
 7) Promote to production.
+
 ![_config.yml]({{ site.baseurl }}/images/Slack/4.png)
 
 ## Integrating Heroku with Slack:
 
 Heroku ChatOps uses the power of [Heroku Pipelines] (https://devcenter.heroku.com/articles/pipelines) to bring a collaborative deploy workflow to Slack. As a prerequisite, we need Slack permissions to add and approve apps.
 First authorize Slack using the below URL:
-```
-https://chatops.heroku.com/auth/slack_install
-```
+
+[Add to Slack](https://chatops.heroku.com/auth/slack_install)
+
 
 Just like Heroku CLI we will be using Slack Slash commands to interact with the Heroku pipelines. Slash commands are processed as shown below:
 
 ![_config.yml]({{ site.baseurl }}/images/Slack/5.png)
 
-Now go to the SlackBot channel and use the slash commands to enable the ChatOps.
+Open Slack and go to the SlackBot channel to use slash commands to enable ChatOps.
 
 Use the below command to login to Heorku and Github form Slack Bot:
 
@@ -86,7 +90,7 @@ This way Heroku, Github and Slack integration helps to use a simple, mobile-read
 
 ## References:
 1. [SLACK MEDIUM](https://medium.com/slack-developer-blog/https-medium-com-slack-developer-blog-building-heroku-chatops-for-slack-f85ef2a3a94) 
-1. [Salesforce DX Development Model Trail](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_dev_model)
+1. [Heroku Documentation](https://devcenter.heroku.com/articles/chatops)
 
 
 Keywords: #SFDCBrewery #SriharideepKolagani #Heroku #ChatOps #Salesforce #Slack #CI #CD #Github #SalesforceCertification
