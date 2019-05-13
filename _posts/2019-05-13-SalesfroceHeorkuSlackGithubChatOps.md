@@ -64,7 +64,6 @@ Use the below command to deploy a specific branch:
 
 ```
 /h deploy PIPELINE_NAME/BRANCH_NAME to STAGE_NAME
-
 ```
 In order to deploy to multiple apps use the below command:
 
@@ -74,6 +73,7 @@ In order to deploy to multiple apps use the below command:
 ![_config.yml]({{ site.baseurl }}/images/Slack/6.png)
 
 Use the below command to promote the app to Prod 
+
 ```
 /h promote PIPELINE_NAME from UPSTREAM_STAGE
 ```
