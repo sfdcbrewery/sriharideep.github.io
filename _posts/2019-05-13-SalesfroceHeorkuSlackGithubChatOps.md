@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Sack Dev Collaboration gap with Heroku and Slack
+title:  Sack Dev Collaboration gap with Heroku and Slack - ChatOps with Heroku
 ---
 ![_config.yml]({{ site.baseurl }}/images/Slack/main.png)
 
