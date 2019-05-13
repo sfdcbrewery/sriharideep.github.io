@@ -36,7 +36,6 @@ Heroku ChatOps uses the power of [Heroku Pipelines] (https://devcenter.heroku.co
 First authorize Slack using the below URL:
 ```
 https://chatops.heroku.com/auth/slack_install
-
 ```
 
 Just like Heroku CLI we will be using Slack Slash commands to interact with the Heroku pipelines. Slash commands are processed as shown below:
@@ -49,7 +48,6 @@ Use the below command to login to Heorku and Github form Slack Bot:
 
 ```
 /h login 
-
 ```
 Make sure user has a deploy permission in Heroku and write permission in Github. 
 
@@ -57,7 +55,6 @@ In order to deploy code to app, use the below command form the Slack Bot:
 
 ```
 /h deploy PIPELINE_NAME to STAGE_NAME
-
 ```
 Use the below command to deploy a specific branch:
 
@@ -69,24 +66,23 @@ In order to deploy to multiple apps use the below command:
 
 ```
 /h deploy PIPELINE_NAME to STAGE_NAME/APP_NAME
-
 ```
 ![_config.yml]({{ site.baseurl }}/images/Slack/6.png)
 
 Use the below command to promote the app to Prod 
 ```
 /h promote PIPELINE_NAME from UPSTREAM_STAGE
-
 ```
 We can also route the notifcations to different channels using the below command:
 
 ```
 /h route PIPELINE_NAME to #CHANNEL_NAME
-
 ```
 ![_config.yml]({{ site.baseurl }}/images/Slack/7.png)
 
 This way Heroku, Github and Slack integration helps to use a simple, mobile-ready CLI for continuous delivery that works everywhere. 
+
+![_config.yml]({{ site.baseurl }}/images/Slack/Slack.gif)
 
 ## References:
 1. [SLACK MEDIUM](https://medium.com/slack-developer-blog/https-medium-com-slack-developer-blog-building-heroku-chatops-for-slack-f85ef2a3a94) 
