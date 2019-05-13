@@ -7,7 +7,7 @@ title:  Sack Dev Collaboration gap with Heroku and Slack - ChatOps with Heroku
 Heroku is the world’s most effective cloud development platform for building and delivering apps. Below are the four key areas of Heroku that enable teams to deliver engaging apps:
 
 1. Developer Experience 
-2. Colloboration 
+2. Collaboration 
 3. Data Services 
 4. Security
 
@@ -53,7 +53,7 @@ Use the below command to login to Heorku and Github form Slack Bot:
 ```
 Make sure user has a deploy permission in Heroku and write permission in Github. 
 
-In order to deploy code to app, use the below command form the Slack Bot:
+In order to deploy code to app, use the below command from the Slack Bot:
 
 ```
 /h deploy PIPELINE_NAME to STAGE_NAME
@@ -75,14 +75,14 @@ Use the below command to promote the app to Prod
 ```
 /h promote PIPELINE_NAME from UPSTREAM_STAGE
 ```
-We can also route the notifcations to different channels using the below command:
+We can also route the notifications to different channels using the below command:
 
 ```
 /h route PIPELINE_NAME to #CHANNEL_NAME
 ```
 ![_config.yml]({{ site.baseurl }}/images/Slack/7.png)
 
-This way Heroku, Github and Slack integration helps to use a simple, mobile-ready CLI for continuous delivery that works everywhere. Happy ChatOps everyone!
+This way Heroku, Github and Slack integration help to use a simple, mobile-ready CLI for continuous delivery that works everywhere. Happy ChatOps everyone!
 
 ![_config.yml]({{ site.baseurl }}/images/Slack/Slack.gif)
 
