@@ -8,6 +8,7 @@ Lightning Web Components framework was open sourced in TrailHeaDX 2019, allowing
 
 ![_config.yml]({{ site.baseurl }}/images/poke/4.png)
 
+
 Lightning Web Components was born as a modern framework built on the modern web stack. Among other standards, it leverages custom elements, templates, decorators, modules, and other new language constructs available in ECMAScript 6 and beyond.
 
 Lightning Web Components has three key elements:
@@ -155,7 +156,7 @@ We now refer the above LWC component in the main index.html of the app. Now once
 You can mention the environment type(Production, sandbox or testing) while deploying. 
 You will love LWC more once your app gets deployed and you search the skills of your favorite Pokémon on Heroku App. 
 
-Here is the some live action:
+Here is some live action:
 
 ![_config.yml]({{ site.baseurl }}/images/poke/poke.gif)
 
