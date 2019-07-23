@@ -23,15 +23,15 @@ WAI-ARIA(Web Acessbility Intiative - Accessible Rich Internet Applications) is a
 
 2. States - States are attributes that describe the status of an ARIA component to a browser’s accessibility tree. A state describes whether or not a dropdown menu is expanded, whether its input type is disabled or readonly, if a checkbox is checked, if an item in a listbox is selected, and so on. 
 
-3. Properties - More like attributes that are essential to the nature of a given object, or that represent a data value associated with the object. <select> element can have multiple selections vs only one selection. 
+3. Properties - More like attributes that are essential to the nature of a given object, or that represent a data value associated with the object. "<select>" element can have multiple selections vs only one selection. 
 
- Salesforce Lightning Design System (https://www.lightningdesignsystem.com/) (SLDS). SLDS contains over 900 blueprints of HTML, with detailed accessibility guidelines for markup, attributes, and keyboard interactions. 
+ [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/) (SLDS). SLDS contains over 900 blueprints of HTML, with detailed accessibility guidelines for markup, attributes, and keyboard interactions. 
 
-Context and focus management is key to building accessible apps. Consider moving a user’s focus or using an aria-live region appropriately. Refer  SLDS Global Focus Guidelines (https://www.lightningdesignsystem.com/accessibility/guidelines/global-focus/) for more details. 
+Context and focus management is key to building accessible apps. Consider moving a user’s focus or using an aria-live region appropriately. Refer  [SLDS Global Focus Guidelines](https://www.lightningdesignsystem.com/accessibility/guidelines/global-focus/) for more details. 
 
 In Salesforce world, we have Aura and Lightning components. Aura component include different namespaces like ui, aura etc. and have older ARIA specification which no longer meet the ARIA specification. Aura components in the lightning namespace, as well as Lightning web components with the lightning- prefix, are all written to the latest ARIA standard and follow the latest in SLDS component blueprints. Wherever possible, use these components over their older alternatives. Many Lightning components also have attributes to set ARIA properties.
 
-Here is an not very accessible component
+Here is a not very accessible component
 
 ```
 <ul>
@@ -65,12 +65,6 @@ Now here is an accessible component
 </lightning-example-list>
 ```
 
-Also be sure not to use Camel case with Lightning Components. We have to use Kebob case as shown below:
-
-```
-<lightning-example-input ariaDescribedby="foo">
-
-```
 You need to be. careful about the Shadow DOM. Many aspects of web accessibility rely on component ID references linking different elements on the page. A simple example of this involves labeling form inputs.
 
 Non accessbile way:
@@ -108,6 +102,6 @@ If you enjoyed reading this blog post, don’t wait to lead the accessibility tr
 
 # Resources:
 
-1. (Accessibility Trail)[[https://trailhead.salesforce.com/content/learn/trails/get-started-with-web-accessibility]
-2. (W3C)[https://www.w3.org/TR/wai-aria-1.1/]
+1. [Accessibility Trail]([https://trailhead.salesforce.com/content/learn/trails/get-started-with-web-accessibility)
+2. [W3C](https://www.w3.org/TR/wai-aria-1.1/)
 
