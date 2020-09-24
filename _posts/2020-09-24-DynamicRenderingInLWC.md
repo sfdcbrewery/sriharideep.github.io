@@ -93,7 +93,9 @@ insidersMultipleTemplates
 
 ```
 
-It’s possible for a component to render multiple templates, we recommend using an if:true|false directive to render nested templates conditionally instead. Once we deploy the LWC components you can see the dynamic behavior based on the screen size. 
+We can also use an if:true-false directive to render nested templates conditionally instead. 
+
+Once we deploy the LWC components you can see the dynamic behavior based on the screen size.
 
 # Component in Web:
 ![_config.yml]({{ site.baseurl }}/images/webmob/web.png)
