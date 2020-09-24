@@ -6,7 +6,7 @@ title:  Dynamic HTML and CSS rendering in Lightning Web Components (LWC) for Des
 
 LWC has different lifecycle hooks which are essentially  are callback methods triggered at a specific phase of a component instance’s lifecycle.
 
-We are interested in the render() callback method to update the UI conditionally. Render() can be called before or after connectedCallback(). Though it is rare to call the  render() in a compoenent it's main use case is to consitionally rneder a valid HTML template based on a business logic.
+We are interested in the render() callback method to update the UI conditionally. Render() can be called before or after connectedCallback(). Though it is rare to call the render() in a component it's main use case is to conditionally render a valid HTML template based on business logic.
 
 For example, imagine that you have a component that can be rendered in two different ways but you don’t want to mix the HTML in one file. Create multiple HTML files in the component bundle. Import them both and add a condition in the render() method to return the correct template depending on the component’s state.
 
