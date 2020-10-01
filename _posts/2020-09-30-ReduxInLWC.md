@@ -10,11 +10,11 @@ Redux is a predictable state container for JavaScript applications. It helps you
 In an app where data is shared among components, it might be confusing to actually know where a state should live. Ideally, the data in a component should live in just one component, so sharing data among sibling components becomes difficult. For instance, in LWC, to share data among siblings, a state has to live in the parent component. A method for updating this state is provided by the parent component and passed as props to these sibling components.
 
 # Basics of Redux
-1. Redux is best explained using a box metaphor. You could think of Redux as a box.
-2. The box organizes the state in a simple place
-3. You can ask the box what is the current state.
-4. You can describe changes in the state of the box.
-5. The box will notify changes to subscribers.
+Redux is best explained using a box metaphor. You could think of Redux as a box.
+1. The box organizes the state in a simple place
+2. You can ask the box what is the current state.
+3. You can describe changes in the state of the box.
+4. The box will notify changes to subscribers.
 
 # Core Principles of Redux:
 1. The state of the app is stored in one JavaScript object.
